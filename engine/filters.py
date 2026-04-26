@@ -83,9 +83,18 @@ def apply_filters(
                 time.sleep(_SLEEP_BETWEEN_TICKERS)
                 continue
 
-            # Filtre secteur
-            sector_match = _match_sector(ticker_data.get("sector_barchart", ""), top_sectors)
+            # Filtre secteur — récupérer via yfinance si absent
+            sector_str = ticker_data.get("sector_barchart", "")
+            if not sector_str:
+                try:
+                    info = yf.Ticker(symbol).info
+                    sector_str = info.get("sector", "")
+                except Exception:
+                    sector_str = ""
+
+            sector_match = _match_sector(sector_str, top_sectors)
             if sector_match is None:
+                logger.debug(f"  {symbol} rejeté : secteur '{sector_str}' hors Top 3")
                 time.sleep(_SLEEP_BETWEEN_TICKERS)
                 continue
 

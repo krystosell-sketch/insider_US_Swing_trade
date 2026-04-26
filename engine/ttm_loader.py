@@ -1,190 +1,188 @@
 """
-Étape 2 du pipeline daily : récupération des tickers en TTM Squeeze ON sur Barchart.
-Méthode : session requests → cookie XSRF → double-décodage → appel API JSON interne.
+Étape 2 du pipeline daily : calcul du TTM Squeeze sur l'univers S&P 500 + mid-caps.
+Remplace le scraping Barchart (API bloquée sans login).
+TTM Squeeze ON = Bandes de Bollinger (20,2) à l'intérieur des Bandes de Keltner (20, 1.5×ATR14).
 """
 
 import logging
 import time
-from urllib.parse import unquote
+from io import StringIO
 
+import numpy as np
+import pandas as pd
 import requests
+import yfinance as yf
 
 logger = logging.getLogger(__name__)
 
-_BASE_URL = "https://www.barchart.com"
-_IDEA_URL = f"{_BASE_URL}/investing-ideas/ttm-squeeze/on"
-_API_URL = f"{_BASE_URL}/proxies/core-api/v1/quotes/get"
-
-_FIELDS = ",".join([
-    "symbol", "symbolName", "lastPrice", "priceChange", "percentChange",
-    "percentChange5d", "tradeTime", "symbolCode", "symbolType",
-    "averageVolume", "volume", "sector", "industry",
-])
-
-_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept": "application/json",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Referer": _IDEA_URL,
-    "Origin": _BASE_URL,
-}
-
-_MAX_RETRIES = 3
-_PAGE_LIMIT = 100
-_SLEEP_BETWEEN_PAGES = 1.2
+_SLEEP_BATCH = 1.0  # secondes entre batches yfinance
+_BATCH_SIZE = 50    # tickers par batch
 
 
-def _get_xsrf_token(session: requests.Session) -> str | None:
-    """Charge la page principale pour obtenir le cookie XSRF-TOKEN."""
-    for attempt in range(_MAX_RETRIES):
-        try:
-            resp = session.get(_IDEA_URL, headers={"User-Agent": _HEADERS["User-Agent"]}, timeout=20)
-            resp.raise_for_status()
-            raw = session.cookies.get("XSRF-TOKEN")
-            if raw:
-                token = unquote(unquote(raw))
-                logger.info("XSRF-TOKEN obtenu")
-                return token
-            logger.warning(f"Cookie XSRF-TOKEN absent (tentative {attempt+1})")
-        except Exception as e:
-            wait = 2 ** attempt
-            logger.warning(f"Erreur XSRF (tentative {attempt+1}) : {e} — retry dans {wait}s")
-            time.sleep(wait)
-    return None
-
-
-def _fetch_page(session: requests.Session, token: str, page: int, order_by: str, order_dir: str, list_name: str = "ttm.squeeze.long") -> dict | None:
-    """Appel à l'API JSON interne de Barchart pour une page donnée."""
-    params = {
-        "fields": _FIELDS,
-        "list": list_name,
-        "orderBy": order_by,
-        "orderDir": order_dir,
-        "page": page,
-        "limit": _PAGE_LIMIT,
-        "raw": "1",
-        "meta": "field.shortName,lists.lastUpdate",
-    }
-    headers = {**_HEADERS, "x-xsrf-token": token}
-
-    for attempt in range(_MAX_RETRIES):
-        try:
-            resp = session.get(_API_URL, params=params, headers=headers, timeout=20)
-            if resp.status_code == 403:
-                logger.warning("HTTP 403 — token expiré, re-fetch XSRF")
-                new_token = _get_xsrf_token(session)
-                if new_token:
-                    headers["x-xsrf-token"] = new_token
-                continue
-            resp.raise_for_status()
-            data = resp.json()
-            # Log de débogage : structure de la réponse
-            if page == 1:
-                total = data.get("meta", {}).get("total", "?")
-                logger.info(f"API Barchart [{list_name}] — total={total}, keys={list(data.keys())}")
-            return data
-        except Exception as e:
-            wait = 2 ** attempt
-            logger.warning(f"Erreur page {page} (tentative {attempt+1}) : {e} — retry dans {wait}s")
-            time.sleep(wait)
-    return None
-
-
-def _parse_ticker(row: dict) -> dict | None:
-    """Extrait les champs utiles d'une ligne de résultat Barchart."""
+def _get_sp500_tickers() -> list[str]:
+    """Récupère les tickers du S&P 500 depuis Wikipedia."""
     try:
-        raw = row.get("raw", {})
-        return {
-            "symbol": raw.get("symbol", "").upper().strip(),
-            "name": raw.get("symbolName", ""),
-            "price": float(raw.get("lastPrice", 0) or 0),
-            "change_pct": float(raw.get("percentChange", 0) or 0),
-            "change_5d_pct": float(raw.get("percentChange5d", 0) or 0),
-            "volume": int(raw.get("volume", 0) or 0),
-            "avg_volume": int(raw.get("averageVolume", 0) or 0),
-            "sector_barchart": raw.get("sector", ""),
-            "industry": raw.get("industry", ""),
-        }
+        url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+        resp = requests.get(url, timeout=15)
+        tables = pd.read_html(StringIO(resp.text))
+        tickers = tables[0]["Symbol"].tolist()
+        # Nettoyer les tickers (BRK.B → BRK-B pour yfinance)
+        tickers = [t.replace(".", "-") for t in tickers]
+        logger.info(f"S&P 500 : {len(tickers)} tickers récupérés depuis Wikipedia")
+        return tickers
     except Exception as e:
-        logger.debug(f"Parsing ticker échoué : {e} — {row}")
-        return None
+        logger.error(f"Erreur récupération S&P 500 : {e}")
+        return []
+
+
+def _get_sp400_tickers() -> list[str]:
+    """Récupère les tickers du S&P 400 Mid-Cap depuis Wikipedia."""
+    try:
+        url = "https://en.wikipedia.org/wiki/List_of_S%26P_400_companies"
+        resp = requests.get(url, timeout=15)
+        tables = pd.read_html(StringIO(resp.text))
+        tickers = tables[0]["Symbol"].tolist()
+        tickers = [t.replace(".", "-") for t in tickers]
+        logger.info(f"S&P 400 Mid-Cap : {len(tickers)} tickers récupérés")
+        return tickers
+    except Exception as e:
+        logger.warning(f"S&P 400 indisponible : {e}")
+        return []
+
+
+def _compute_ema(values: np.ndarray, period: int) -> float:
+    """EMA simple (méthode Wilder)."""
+    if len(values) < period:
+        return float(np.mean(values))
+    k = 2 / (period + 1)
+    ema = float(np.mean(values[:period]))
+    for v in values[period:]:
+        ema = v * k + ema * (1 - k)
+    return ema
+
+
+def _is_ttm_squeeze_on(close: np.ndarray, high: np.ndarray, low: np.ndarray) -> bool:
+    """
+    Calcule si le TTM Squeeze est ON.
+    Squeeze ON = Bollinger Bands (20,2) entièrement à l'intérieur des Keltner Channels (20 EMA, 1.5×ATR14).
+    """
+    if len(close) < 21:
+        return False
+
+    # Bollinger Bands (20 périodes, 2 écarts-types)
+    sma20 = float(np.mean(close[-20:]))
+    std20 = float(np.std(close[-20:], ddof=1))
+    bb_upper = sma20 + 2.0 * std20
+    bb_lower = sma20 - 2.0 * std20
+    bb_width = bb_upper - bb_lower
+
+    if bb_width == 0:
+        return False
+
+    # Keltner Channels (EMA20, ATR14 × 1.5)
+    ema20 = _compute_ema(close[-21:], 20)
+
+    # ATR14
+    tr_list = []
+    for i in range(-14, 0):
+        tr = max(
+            high[i] - low[i],
+            abs(high[i] - close[i - 1]),
+            abs(low[i] - close[i - 1]),
+        )
+        tr_list.append(tr)
+    atr14 = float(np.mean(tr_list))
+
+    kc_upper = ema20 + 1.5 * atr14
+    kc_lower = ema20 - 1.5 * atr14
+
+    # Squeeze ON si BB entièrement dans KC
+    return bb_upper < kc_upper and bb_lower > kc_lower
+
+
+def _download_batch(tickers: list[str]) -> dict:
+    """
+    Télécharge les données OHLCV pour un batch de tickers.
+    Retourne un dict {ticker: df}.
+    """
+    try:
+        data = yf.download(
+            tickers,
+            period="3mo",
+            interval="1d",
+            group_by="ticker",
+            progress=False,
+            auto_adjust=True,
+            threads=True,
+        )
+        result = {}
+        if len(tickers) == 1:
+            # yfinance retourne un DataFrame simple pour 1 ticker
+            if data is not None and not data.empty:
+                result[tickers[0]] = data
+        else:
+            for ticker in tickers:
+                try:
+                    df = data[ticker].dropna()
+                    if df is not None and len(df) >= 21:
+                        result[ticker] = df
+                except Exception:
+                    continue
+        return result
+    except Exception as e:
+        logger.warning(f"Batch download échoué : {e}")
+        return {}
 
 
 def get_ttm_squeeze_tickers(config: dict) -> list[dict]:
     """
-    Scrape Barchart pour récupérer tous les tickers en TTM Squeeze ON.
-    Essaie plusieurs valeurs de list en cascade jusqu'à obtenir des données.
+    Calcule le TTM Squeeze sur l'univers S&P 500 + S&P 400.
+    Retourne les tickers dont le squeeze est actuellement ON.
     """
-    order_by = config["ttm_squeeze"]["order_by"]
-    order_dir = config["ttm_squeeze"]["order_dir"]
+    # Univers de tickers
+    tickers = _get_sp500_tickers()
+    tickers += _get_sp400_tickers()
+    tickers = list(dict.fromkeys(tickers))  # dédupliquer en gardant l'ordre
+    logger.info(f"Univers total : {len(tickers)} tickers à analyser")
 
-    # Ordre de priorité des list Barchart à essayer
-    list_candidates = [
-        "ttm.squeeze.long",       # LONG SQUEEZE tab (squeeze actif haussier)
-        "ttm.squeeze.on",         # alias possible
-        "ttm.squeeze.triggered",  # TRIGGERED tab (vient de se déclencher)
-    ]
-
-    session = requests.Session()
-    token = _get_xsrf_token(session)
-    if not token:
-        logger.error("Impossible d'obtenir le token XSRF — abandon TTM loader")
+    if not tickers:
+        logger.error("Aucun ticker disponible — abandon")
         return []
 
-    tickers = []
+    squeeze_on = []
+    batches = [tickers[i:i + _BATCH_SIZE] for i in range(0, len(tickers), _BATCH_SIZE)]
 
-    for list_name in list_candidates:
-        logger.info(f"Essai list Barchart : '{list_name}'")
-        page = 1
-        tickers = []
+    for batch_num, batch in enumerate(batches, 1):
+        logger.info(f"Batch {batch_num}/{len(batches)} ({len(batch)} tickers)")
+        batch_data = _download_batch(batch)
 
-        while True:
-            logger.info(f"TTM Squeeze [{list_name}] page {page}")
-            data = _fetch_page(session, token, page, order_by, order_dir, list_name)
+        for ticker, df in batch_data.items():
+            try:
+                close = df["Close"].squeeze().values.astype(float)
+                high = df["High"].squeeze().values.astype(float)
+                low = df["Low"].squeeze().values.astype(float)
+                volume = df["Volume"].squeeze().values.astype(float)
 
-            if data is None:
-                logger.error(f"Échec récupération page {page} — arrêt pagination")
-                break
+                if not _is_ttm_squeeze_on(close, high, low):
+                    continue
 
-            rows = data.get("data", [])
-            if not rows:
-                logger.info(f"Page {page} vide — fin de pagination")
-                break
+                avg_vol = float(np.mean(volume[-20:])) if len(volume) >= 20 else 0.0
+                squeeze_on.append({
+                    "symbol": ticker,
+                    "name": ticker,
+                    "price": round(float(close[-1]), 2),
+                    "change_pct": round((close[-1] - close[-2]) / close[-2] * 100, 2) if len(close) >= 2 else 0.0,
+                    "change_5d_pct": round((close[-1] - close[-6]) / close[-6] * 100, 2) if len(close) >= 6 else 0.0,
+                    "volume": int(volume[-1]),
+                    "avg_volume": int(avg_vol),
+                    "sector_barchart": "",  # récupéré dans filters.py via yfinance.Ticker.info
+                    "industry": "",
+                })
+            except Exception as e:
+                logger.debug(f"  {ticker} : erreur calcul squeeze — {e}")
+                continue
 
-            for row in rows:
-                t = _parse_ticker(row)
-                if t and t["symbol"]:
-                    tickers.append(t)
+        time.sleep(_SLEEP_BATCH)
 
-            total = data.get("meta", {}).get("total", 0)
-            logger.info(f"  Page {page} : {len(rows)} tickers (total Barchart : {total})")
-
-            if len(tickers) >= total or len(rows) < _PAGE_LIMIT:
-                break
-
-            page += 1
-            time.sleep(_SLEEP_BETWEEN_PAGES)
-
-        if tickers:
-            logger.info(f"Données obtenues avec list='{list_name}' : {len(tickers)} tickers bruts")
-            break
-        else:
-            logger.warning(f"list='{list_name}' retourne 0 tickers — essai suivant")
-
-    # Dédupliquer (garde le premier)
-    seen = set()
-    unique = []
-    for t in tickers:
-        if t["symbol"] not in seen:
-            seen.add(t["symbol"])
-            unique.append(t)
-
-    # Filtrer les entrées sans symbole valide
-    unique = [t for t in unique if len(t["symbol"]) <= 5 and t["symbol"].isalpha()]
-
-    logger.info(f"Total TTM Squeeze ON : {len(unique)} tickers")
-    return unique
+    logger.info(f"TTM Squeeze ON : {len(squeeze_on)}/{len(tickers)} tickers")
+    return squeeze_on
