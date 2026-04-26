@@ -1,7 +1,169 @@
 {
-  "stocks": {},
-  "history": [],
-  "last_updated": "2026-04-26T21:53:58.541959Z",
+  "stocks": {
+    "PARR": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 64.19,
+      "avg_volume": 1440725,
+      "sma20": 62.86,
+      "sma50": 54.67,
+      "name": "PARR",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "CGON": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 68.68,
+      "avg_volume": 1196995,
+      "sma20": 68.31,
+      "sma50": 63.81,
+      "name": "CGON",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "NTCT": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 33.26,
+      "avg_volume": 531155,
+      "sma20": 32.64,
+      "sma50": 31.09,
+      "name": "NTCT",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "INVA": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 23.57,
+      "avg_volume": 656970,
+      "sma20": 23.56,
+      "sma50": 23.01,
+      "name": "INVA",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "MITK": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 14.29,
+      "avg_volume": 898275,
+      "sma20": 14.12,
+      "sma50": 14.09,
+      "name": "MITK",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "XNCR": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 12.98,
+      "avg_volume": 754480,
+      "sma20": 12.42,
+      "sma50": 12.13,
+      "name": "XNCR",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "SXC": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 6.51,
+      "avg_volume": 1126220,
+      "sma20": 6.41,
+      "sma50": 6.32,
+      "name": "SXC",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "RLMD": {
+      "state": "ATTENTE",
+      "since": "2026-04-26",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 7.21,
+      "avg_volume": 1392610,
+      "sma20": 7.08,
+      "sma50": 5.98,
+      "name": "RLMD",
+      "insider_data": null,
+      "trigger_data": null
+    }
+  },
+  "history": [
+    {
+      "ts": "2026-04-26T22:05:26.841841Z",
+      "ticker": "PARR",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.841928Z",
+      "ticker": "CGON",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.841996Z",
+      "ticker": "NTCT",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.842058Z",
+      "ticker": "INVA",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.842145Z",
+      "ticker": "MITK",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.842218Z",
+      "ticker": "XNCR",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.842280Z",
+      "ticker": "SXC",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-26T22:05:26.842337Z",
+      "ticker": "RLMD",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    }
+  ],
+  "last_updated": "2026-04-26T22:05:26.842348Z",
   "top_sectors": [
     {
       "symbol": "XLE",
