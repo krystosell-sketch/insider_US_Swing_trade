@@ -1,4 +1,4 @@
-git+https://github.com/StreamAlpha/tvDatafeed.git
+yfinance>=0.2.40
 edgartools>=5.30.0
 finvizfinance>=0.14
 requests>=2.31
