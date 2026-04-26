@@ -57,11 +57,11 @@ def _get_xsrf_token(session: requests.Session) -> str | None:
     return None
 
 
-def _fetch_page(session: requests.Session, token: str, page: int, order_by: str, order_dir: str) -> dict | None:
+def _fetch_page(session: requests.Session, token: str, page: int, order_by: str, order_dir: str, list_name: str = "ttm.squeeze.long") -> dict | None:
     """Appel à l'API JSON interne de Barchart pour une page donnée."""
     params = {
         "fields": _FIELDS,
-        "list": "ttm.squeeze.on",
+        "list": list_name,
         "orderBy": order_by,
         "orderDir": order_dir,
         "page": page,
@@ -81,7 +81,12 @@ def _fetch_page(session: requests.Session, token: str, page: int, order_by: str,
                     headers["x-xsrf-token"] = new_token
                 continue
             resp.raise_for_status()
-            return resp.json()
+            data = resp.json()
+            # Log de débogage : structure de la réponse
+            if page == 1:
+                total = data.get("meta", {}).get("total", "?")
+                logger.info(f"API Barchart [{list_name}] — total={total}, keys={list(data.keys())}")
+            return data
         except Exception as e:
             wait = 2 ** attempt
             logger.warning(f"Erreur page {page} (tentative {attempt+1}) : {e} — retry dans {wait}s")
@@ -112,10 +117,17 @@ def _parse_ticker(row: dict) -> dict | None:
 def get_ttm_squeeze_tickers(config: dict) -> list[dict]:
     """
     Scrape Barchart pour récupérer tous les tickers en TTM Squeeze ON.
-    Retourne une liste de dicts avec métadonnées de base.
+    Essaie plusieurs valeurs de list en cascade jusqu'à obtenir des données.
     """
     order_by = config["ttm_squeeze"]["order_by"]
     order_dir = config["ttm_squeeze"]["order_dir"]
+
+    # Ordre de priorité des list Barchart à essayer
+    list_candidates = [
+        "ttm.squeeze.long",       # LONG SQUEEZE tab (squeeze actif haussier)
+        "ttm.squeeze.on",         # alias possible
+        "ttm.squeeze.triggered",  # TRIGGERED tab (vient de se déclencher)
+    ]
 
     session = requests.Session()
     token = _get_xsrf_token(session)
@@ -124,34 +136,44 @@ def get_ttm_squeeze_tickers(config: dict) -> list[dict]:
         return []
 
     tickers = []
-    page = 1
 
-    while True:
-        logger.info(f"TTM Squeeze page {page}")
-        data = _fetch_page(session, token, page, order_by, order_dir)
+    for list_name in list_candidates:
+        logger.info(f"Essai list Barchart : '{list_name}'")
+        page = 1
+        tickers = []
 
-        if data is None:
-            logger.error(f"Échec récupération page {page} — arrêt pagination")
+        while True:
+            logger.info(f"TTM Squeeze [{list_name}] page {page}")
+            data = _fetch_page(session, token, page, order_by, order_dir, list_name)
+
+            if data is None:
+                logger.error(f"Échec récupération page {page} — arrêt pagination")
+                break
+
+            rows = data.get("data", [])
+            if not rows:
+                logger.info(f"Page {page} vide — fin de pagination")
+                break
+
+            for row in rows:
+                t = _parse_ticker(row)
+                if t and t["symbol"]:
+                    tickers.append(t)
+
+            total = data.get("meta", {}).get("total", 0)
+            logger.info(f"  Page {page} : {len(rows)} tickers (total Barchart : {total})")
+
+            if len(tickers) >= total or len(rows) < _PAGE_LIMIT:
+                break
+
+            page += 1
+            time.sleep(_SLEEP_BETWEEN_PAGES)
+
+        if tickers:
+            logger.info(f"Données obtenues avec list='{list_name}' : {len(tickers)} tickers bruts")
             break
-
-        rows = data.get("data", [])
-        if not rows:
-            logger.info(f"Page {page} vide — fin de pagination")
-            break
-
-        for row in rows:
-            t = _parse_ticker(row)
-            if t and t["symbol"]:
-                tickers.append(t)
-
-        total = data.get("meta", {}).get("total", 0)
-        logger.info(f"  Page {page} : {len(rows)} tickers (total Barchart : {total})")
-
-        if len(tickers) >= total or len(rows) < _PAGE_LIMIT:
-            break
-
-        page += 1
-        time.sleep(_SLEEP_BETWEEN_PAGES)
+        else:
+            logger.warning(f"list='{list_name}' retourne 0 tickers — essai suivant")
 
     # Dédupliquer (garde le premier)
     seen = set()
