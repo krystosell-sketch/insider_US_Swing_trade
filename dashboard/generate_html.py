@@ -298,8 +298,10 @@ def generate_html(state: dict, top_sectors: list[dict], config: dict) -> None:
 
     # Timestamp affiché
     try:
+        from zoneinfo import ZoneInfo
         ts = datetime.fromisoformat(last_updated.replace("Z", "+00:00"))
-        ts_display = ts.strftime("%Y-%m-%d %H:%M UTC")
+        ts_montreal = ts.astimezone(ZoneInfo("America/Toronto"))
+        ts_display = ts_montreal.strftime("%Y-%m-%d %H:%M") + " (Montréal)"
     except Exception:
         ts_display = last_updated
 
