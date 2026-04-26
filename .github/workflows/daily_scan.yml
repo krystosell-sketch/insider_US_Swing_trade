@@ -1,0 +1,60 @@
+name: Daily Scan
+
+on:
+  schedule:
+    - cron: '0 13 * * 1-5'   # 08:00 EST (UTC-5) / 09:00 EDT (UTC-4)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily scan
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
+        run: python main.py --mode daily
+
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stocks_state.json
+          git diff --cached --quiet || git commit -m "chore: update state $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          force_orphan: false
+          keep_files: false
+          commit_message: "deploy: dashboard $(date -u +%Y-%m-%d_%H%M)"

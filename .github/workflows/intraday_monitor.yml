@@ -1,0 +1,62 @@
+name: Intraday Monitor
+
+on:
+  schedule:
+    - cron: '*/15 13-20 * * 1-5'   # 09:00-16:00 EST aux 15 min (UTC 13h-20h)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run intraday monitor
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
+        run: python main.py --mode intraday
+
+      - name: Commit state (only if changed)
+        if: env.STATE_CHANGED == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stocks_state.json
+          git diff --cached --quiet || git commit -m "chore: intraday update $(date -u +%Y-%m-%dT%H%M)"
+          git push
+
+      - name: Deploy to GitHub Pages (only if changed)
+        if: env.STATE_CHANGED == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          force_orphan: false
+          keep_files: false
+          commit_message: "deploy: intraday $(date -u +%Y-%m-%dT%H%M)"

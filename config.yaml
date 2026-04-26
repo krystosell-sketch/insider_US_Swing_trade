@@ -1,0 +1,57 @@
+sectors:
+  benchmark: "SPY"
+  etfs:
+    - { symbol: "XLK", name: "Technology" }
+    - { symbol: "XLF", name: "Financials" }
+    - { symbol: "XLE", name: "Energy" }
+    - { symbol: "XLV", name: "Healthcare" }
+    - { symbol: "XLI", name: "Industrials" }
+    - { symbol: "XLY", name: "Consumer Discretionary" }
+    - { symbol: "XLP", name: "Consumer Staples" }
+    - { symbol: "XLU", name: "Utilities" }
+    - { symbol: "XLRE", name: "Real Estate" }
+    - { symbol: "XLC", name: "Communication" }
+    - { symbol: "XLB", name: "Materials" }
+  weight_3m: 0.6
+  weight_6m: 0.4
+  top_n: 3
+
+ttm_squeeze:
+  url: "https://www.barchart.com/investing-ideas/ttm-squeeze/on"
+  order_by: "percentChange5d"
+  order_dir: "desc"
+
+filters:
+  min_price: 5.0
+  min_avg_volume: 500000
+  sma_periods: [20, 50]
+
+tradingview:
+  username: ""
+  password: ""
+  n_bars: 100
+
+insiders:
+  window_days: 30
+  min_buy_transactions: 2
+  min_net_value: 10000
+  exclude_10b51: true
+  cluster_buys_7d: 3
+
+triggers:
+  volume_spike_ratio: 1.5
+  news_lookback_hours: 24
+
+states:
+  max_days_attente: 15
+  max_days_setup: 15
+  max_days_play: 5
+
+discord:
+  embed_colors:
+    attente: 0xFEE75C
+    setup: 0xF0883E
+    play: 0x57F287
+    alert: 0xED4245
+    expired: 0x95A5A6
+    summary: 0x5865F2
