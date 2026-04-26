@@ -1,6 +1,34 @@
 {
   "stocks": {},
   "history": [],
-  "last_updated": null,
-  "top_sectors": []
+  "last_updated": "2026-04-26T21:32:20.704887Z",
+  "top_sectors": [
+    {
+      "symbol": "XLE",
+      "name": "Energy",
+      "score": 0.1818,
+      "perf_3m": 0.163,
+      "perf_6m": 0.3079,
+      "rel_3m": 0.1296,
+      "rel_6m": 0.2601
+    },
+    {
+      "symbol": "XLB",
+      "name": "Materials",
+      "score": 0.0576,
+      "perf_3m": 0.0424,
+      "perf_6m": 0.1784,
+      "rel_3m": 0.009,
+      "rel_6m": 0.1306
+    },
+    {
+      "symbol": "XLK",
+      "name": "Technology",
+      "score": 0.0496,
+      "perf_3m": 0.0982,
+      "perf_6m": 0.0747,
+      "rel_3m": 0.0648,
+      "rel_6m": 0.0269
+    }
+  ]
 }
