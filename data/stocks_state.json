@@ -1,93 +1,28 @@
 {
   "stocks": {
-    "PARR": {
-      "state": "ATTENTE",
-      "since": "2026-04-26",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 65.71,
-      "avg_volume": 1392718,
-      "sma20": 62.86,
-      "sma50": 55.16,
-      "name": "PARR",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "MITK": {
-      "state": "ATTENTE",
-      "since": "2026-04-26",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 14.28,
-      "avg_volume": 870329,
-      "sma20": 14.18,
-      "sma50": 14.14,
-      "name": "MITK",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "XNCR": {
-      "state": "ATTENTE",
-      "since": "2026-04-26",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 13.02,
-      "avg_volume": 739284,
-      "sma20": 12.5,
-      "sma50": 12.16,
-      "name": "XNCR",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "SXC": {
       "state": "ATTENTE",
       "since": "2026-04-26",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 6.61,
-      "avg_volume": 1098570,
+      "price": 6.72,
+      "avg_volume": 1114381,
       "sma20": 6.41,
-      "sma50": 6.29,
+      "sma50": 6.26,
       "name": "SXC",
       "insider_data": null,
       "trigger_data": null
     },
-    "NTRA": {
+    "CVI": {
       "state": "ATTENTE",
-      "since": "2026-04-27",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 205.76,
-      "avg_volume": 1256756,
-      "sma20": 203.94,
-      "sma50": 202.85,
-      "name": "NTRA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CELC": {
-      "state": "ATTENTE",
-      "since": "2026-04-27",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 123.25,
-      "avg_volume": 709546,
-      "sma20": 118.77,
-      "sma50": 113.51,
-      "name": "CELC",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "VISN": {
-      "state": "ATTENTE",
-      "since": "2026-04-27",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 19.64,
-      "avg_volume": 4883080,
-      "sma20": 18.86,
-      "sma50": 18.33,
-      "name": "VISN",
+      "since": "2026-04-28",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 32.16,
+      "avg_volume": 1023202,
+      "sma20": 31.59,
+      "sma50": 29.18,
+      "name": "CVI",
       "insider_data": null,
       "trigger_data": null
     }
@@ -197,36 +132,85 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029395Z",
+      "ticker": "PARR",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029458Z",
+      "ticker": "MITK",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029505Z",
+      "ticker": "XNCR",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029546Z",
+      "ticker": "NTRA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029582Z",
+      "ticker": "CELC",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029615Z",
+      "ticker": "VISN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-28T18:11:45.029659Z",
+      "ticker": "CVI",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-04-27T17:51:20.243770Z",
+  "last_updated": "2026-04-28T18:11:45.029673Z",
   "top_sectors": [
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.1728,
-      "perf_3m": 0.1489,
-      "perf_6m": 0.3038,
-      "rel_3m": 0.1182,
-      "rel_6m": 0.2546
+      "score": 0.1998,
+      "perf_3m": 0.159,
+      "perf_6m": 0.3393,
+      "rel_3m": 0.1339,
+      "rel_6m": 0.2986
     },
     {
       "symbol": "XLB",
       "name": "Materials",
-      "score": 0.0541,
-      "perf_3m": 0.0385,
-      "perf_6m": 0.1728,
-      "rel_3m": 0.0078,
-      "rel_6m": 0.1236
+      "score": 0.0563,
+      "perf_3m": 0.035,
+      "perf_6m": 0.1666,
+      "rel_3m": 0.0099,
+      "rel_6m": 0.1259
     },
     {
-      "symbol": "XLK",
-      "name": "Technology",
-      "score": 0.0414,
-      "perf_3m": 0.0831,
-      "perf_6m": 0.0742,
-      "rel_3m": 0.0524,
-      "rel_6m": 0.025
+      "symbol": "XLRE",
+      "name": "Real Estate",
+      "score": 0.0422,
+      "perf_3m": 0.0787,
+      "perf_6m": 0.0659,
+      "rel_3m": 0.0536,
+      "rel_6m": 0.0252
     }
   ]
 }
