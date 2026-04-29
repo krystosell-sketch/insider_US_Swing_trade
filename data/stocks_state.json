@@ -1,28 +1,15 @@
 {
   "stocks": {
-    "SXC": {
+    "PARR": {
       "state": "ATTENTE",
-      "since": "2026-04-26",
+      "since": "2026-04-29",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 6.72,
-      "avg_volume": 1114381,
-      "sma20": 6.41,
-      "sma50": 6.26,
-      "name": "SXC",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CVI": {
-      "state": "ATTENTE",
-      "since": "2026-04-28",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 32.16,
-      "avg_volume": 1023202,
-      "sma20": 31.59,
-      "sma50": 29.18,
-      "name": "CVI",
+      "price": 67.01,
+      "avg_volume": 1397800,
+      "sma20": 62.95,
+      "sma50": 56.0,
+      "name": "PARR",
       "insider_data": null,
       "trigger_data": null
     }
@@ -181,36 +168,57 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-04-29T18:05:47.253809Z",
+      "ticker": "SXC",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-29T18:05:47.253896Z",
+      "ticker": "CVI",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Hors TTM Squeeze ON"
+    },
+    {
+      "ts": "2026-04-29T18:05:47.253982Z",
+      "ticker": "PARR",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-04-28T18:11:45.029673Z",
+  "last_updated": "2026-04-29T18:05:47.253994Z",
   "top_sectors": [
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.1998,
-      "perf_3m": 0.159,
-      "perf_6m": 0.3393,
-      "rel_3m": 0.1339,
-      "rel_6m": 0.2986
+      "score": 0.217,
+      "perf_3m": 0.1732,
+      "perf_6m": 0.3581,
+      "rel_3m": 0.1482,
+      "rel_6m": 0.3201
     },
     {
       "symbol": "XLB",
       "name": "Materials",
-      "score": 0.0563,
-      "perf_3m": 0.035,
-      "perf_6m": 0.1666,
-      "rel_3m": 0.0099,
-      "rel_6m": 0.1259
+      "score": 0.0561,
+      "perf_3m": 0.0245,
+      "perf_6m": 0.1791,
+      "rel_3m": -0.0005,
+      "rel_6m": 0.1411
     },
     {
       "symbol": "XLRE",
       "name": "Real Estate",
-      "score": 0.0422,
-      "perf_3m": 0.0787,
-      "perf_6m": 0.0659,
-      "rel_3m": 0.0536,
-      "rel_6m": 0.0252
+      "score": 0.0467,
+      "perf_3m": 0.0646,
+      "perf_6m": 0.0953,
+      "rel_3m": 0.0396,
+      "rel_6m": 0.0573
     }
   ]
 }
