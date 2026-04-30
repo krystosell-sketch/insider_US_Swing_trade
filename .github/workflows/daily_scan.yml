@@ -2,7 +2,7 @@ name: Daily Scan
 
 on:
   schedule:
-    - cron: '0 13 * * 1-5'   # 08:00 EST (UTC-5) / 09:00 EDT (UTC-4)
+    - cron: '0 22 * * 1-5'   # 18:00 EDT (UTC-4) / après clôture des marchés
   workflow_dispatch:
 
 permissions:
