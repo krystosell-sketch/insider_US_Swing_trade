@@ -241,7 +241,8 @@ def generate_html(state: dict, top_sectors: list[dict], config: dict) -> None:
     table_play = _make_play_table(stocks)
 
     # Historique
-    history_html = _format_history(history, hours=48)
+    history_days = config.get("dashboard", {}).get("history_days", 7)
+    history_html = _format_history(history, hours=history_days * 24)
 
     # Timestamp affiché
     try:
@@ -486,7 +487,7 @@ def generate_html(state: dict, top_sectors: list[dict], config: dict) -> None:
   </div>
 
   <div class="history-section">
-    <div class="history-header">📰 Historique des événements (48h)</div>
+    <div class="history-header">📰 Historique des événements ({history_days}j)</div>
     <div class="history-feed">
       {history_html}
     </div>

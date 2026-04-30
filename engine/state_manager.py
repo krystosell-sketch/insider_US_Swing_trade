@@ -69,9 +69,9 @@ def _add_history_event(state: dict, ticker: str, from_state: str | None, to_stat
         "reason": reason,
     }
     state.setdefault("history", []).append(event)
-    # Garder max 500 événements
-    if len(state["history"]) > 500:
-        state["history"] = state["history"][-500:]
+    # Garder max 1000 événements (~3 ans de pipeline daily)
+    if len(state["history"]) > 1000:
+        state["history"] = state["history"][-1000:]
 
 
 def promote_stock(state: dict, ticker: str, new_state: str, extra_data: dict | None = None) -> None:

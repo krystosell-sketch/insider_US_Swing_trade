@@ -47,6 +47,10 @@ states:
   max_days_setup: 20
   max_days_play: 5
 
+dashboard:
+  history_days: 7       # Fenêtre d'affichage de l'historique (jours)
+  max_history_events: 1000  # Nombre max d'événements conservés en mémoire
+
 discord:
   embed_colors:
     attente: 0xFEE75C
