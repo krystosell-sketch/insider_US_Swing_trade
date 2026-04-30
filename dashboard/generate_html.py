@@ -9,7 +9,6 @@ import logging
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import pandas as pd
 import plotly.graph_objects as go
 import plotly.io as pio
 
@@ -37,6 +36,11 @@ COLORS = {
 # Tables Plotly
 # ──────────────────────────────────────────────
 
+def _ticker_link(symbol: str) -> str:
+    url = f"https://www.tradingview.com/chart/?symbol={symbol}"
+    return f'<a href="{url}" target="_blank" class="ticker-link">{symbol}</a>'
+
+
 def _make_attente_table(stocks: dict) -> str:
     rows = [
         (ticker, d)
@@ -48,37 +52,21 @@ def _make_attente_table(stocks: dict) -> str:
     if not rows:
         return _empty_table("Aucun titre en ATTENTE", COLORS["attente"])
 
-    tickers = [r[0] for r in rows]
-    sectors = [r[1].get("sector", "") for r in rows]
-    prices = [f"${r[1].get('price', 0):.2f}" for r in rows]
-    vols = [f"{r[1].get('avg_volume', 0):,}" for r in rows]
-    sma20 = [f"${r[1].get('sma20', 0):.2f}" for r in rows]
-    sma50 = [f"${r[1].get('sma50', 0):.2f}" for r in rows]
-    days = [_days_since(r[1].get("since", "")) for r in rows]
-
-    fig = go.Figure(data=[go.Table(
-        header=dict(
-            values=["<b>Ticker</b>", "<b>Secteur</b>", "<b>Prix</b>", "<b>Vol Moy 20j</b>", "<b>SMA20</b>", "<b>SMA50</b>", "<b>Jours</b>"],
-            fill_color=COLORS["card2"],
-            font=dict(color=COLORS["attente"], size=13),
-            align="left",
-            height=32,
-        ),
-        cells=dict(
-            values=[tickers, sectors, prices, vols, sma20, sma50, days],
-            fill_color=COLORS["card"],
-            font=dict(color=COLORS["text"], size=12),
-            align=["left", "left", "right", "right", "right", "right", "center"],
-            height=28,
-        ),
-    )])
-    fig.update_layout(
-        margin=dict(l=0, r=0, t=0, b=0),
-        paper_bgcolor=COLORS["bg"],
-        plot_bgcolor=COLORS["bg"],
-        height=max(120, len(rows) * 30 + 50),
-    )
-    return pio.to_html(fig, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
+    header = "<tr><th>Ticker</th><th>Secteur</th><th>Prix</th><th>Vol Moy 20j</th><th>SMA20</th><th>SMA50</th><th>Jours</th></tr>"
+    body_rows = []
+    for ticker, d in rows:
+        body_rows.append(
+            f"<tr>"
+            f"<td>{_ticker_link(ticker)}</td>"
+            f"<td>{d.get('sector', '')}</td>"
+            f"<td class='num'>${d.get('price', 0):.2f}</td>"
+            f"<td class='num'>{d.get('avg_volume', 0):,}</td>"
+            f"<td class='num'>${d.get('sma20', 0):.2f}</td>"
+            f"<td class='num'>${d.get('sma50', 0):.2f}</td>"
+            f"<td class='ctr'>{_days_since(d.get('since', ''))}</td>"
+            f"</tr>"
+        )
+    return f'<table class="data-table"><thead>{header}</thead><tbody>{"".join(body_rows)}</tbody></table>'
 
 
 def _make_setup_table(stocks: dict) -> str:
@@ -92,46 +80,25 @@ def _make_setup_table(stocks: dict) -> str:
     if not rows:
         return _empty_table("Aucun titre en SETUP", COLORS["setup"])
 
-    tickers = [r[0] for r in rows]
-    sectors = [r[1].get("sector", "") for r in rows]
-    prices = [f"${r[1].get('price', 0):.2f}" for r in rows]
-    insider_counts = [
-        str(r[1].get("insider_data", {}).get("buy_count", 0) if r[1].get("insider_data") else 0)
-        for r in rows
-    ]
-    insider_values = [
-        f"${r[1].get('insider_data', {}).get('net_value', 0):,.0f}" if r[1].get("insider_data") else "N/A"
-        for r in rows
-    ]
-    last_buys = [
-        r[1].get("insider_data", {}).get("last_buy_date", "N/A") if r[1].get("insider_data") else "N/A"
-        for r in rows
-    ]
-    days = [_days_since(r[1].get("since", "")) for r in rows]
-
-    fig = go.Figure(data=[go.Table(
-        header=dict(
-            values=["<b>Ticker</b>", "<b>Secteur</b>", "<b>Prix</b>", "<b>Achats Insider</b>", "<b>Valeur $</b>", "<b>Dernier Achat</b>", "<b>Jours</b>"],
-            fill_color=COLORS["card2"],
-            font=dict(color=COLORS["setup"], size=13),
-            align="left",
-            height=32,
-        ),
-        cells=dict(
-            values=[tickers, sectors, prices, insider_counts, insider_values, last_buys, days],
-            fill_color=COLORS["card"],
-            font=dict(color=COLORS["text"], size=12),
-            align=["left", "left", "right", "center", "right", "center", "center"],
-            height=28,
-        ),
-    )])
-    fig.update_layout(
-        margin=dict(l=0, r=0, t=0, b=0),
-        paper_bgcolor=COLORS["bg"],
-        plot_bgcolor=COLORS["bg"],
-        height=max(120, len(rows) * 30 + 50),
-    )
-    return pio.to_html(fig, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
+    header = "<tr><th>Ticker</th><th>Secteur</th><th>Prix</th><th>Achats Insider</th><th>Valeur $</th><th>Dernier Achat</th><th>Jours</th></tr>"
+    body_rows = []
+    for ticker, d in rows:
+        ins = d.get("insider_data") or {}
+        buy_count = ins.get("buy_count", 0)
+        net_value = f"${ins.get('net_value', 0):,.0f}" if ins else "N/A"
+        last_buy = ins.get("last_buy_date", "N/A") if ins else "N/A"
+        body_rows.append(
+            f"<tr>"
+            f"<td>{_ticker_link(ticker)}</td>"
+            f"<td>{d.get('sector', '')}</td>"
+            f"<td class='num'>${d.get('price', 0):.2f}</td>"
+            f"<td class='ctr'>{buy_count}</td>"
+            f"<td class='num'>{net_value}</td>"
+            f"<td class='ctr'>{last_buy}</td>"
+            f"<td class='ctr'>{_days_since(d.get('since', ''))}</td>"
+            f"</tr>"
+        )
+    return f'<table class="data-table"><thead>{header}</thead><tbody>{"".join(body_rows)}</tbody></table>'
 
 
 def _make_play_table(stocks: dict) -> str:
@@ -145,49 +112,29 @@ def _make_play_table(stocks: dict) -> str:
     if not rows:
         return _empty_table("Aucun titre en PLAY", COLORS["play"])
 
-    tickers = [r[0] for r in rows]
-    sectors = [r[1].get("sector", "") for r in rows]
-    prices = [f"${r[1].get('price', 0):.2f}" for r in rows]
+    type_labels = {
+        "volume_spike":   "📈 Vol Spike",
+        "news_catalyst":  "📰 News",
+        "insider_cluster": "👥 Cluster",
+    }
 
-    trigger_types = []
-    trigger_details = []
-    for _, d in rows:
+    header = "<tr><th>Ticker</th><th>Secteur</th><th>Prix</th><th>Trigger</th><th>Détail</th><th>Jours</th></tr>"
+    body_rows = []
+    for ticker, d in rows:
         td = d.get("trigger_data") or {}
-        ttype = td.get("type", "N/A")
-        type_labels = {
-            "volume_spike": "📈 Vol Spike",
-            "news_catalyst": "📰 News",
-            "insider_cluster": "👥 Cluster",
-        }
-        trigger_types.append(type_labels.get(ttype, ttype))
-        detail = td.get("detail", "")
-        trigger_details.append(detail[:50] if detail else "N/A")
-
-    days = [_days_since(r[1].get("since", "")) for r in rows]
-
-    fig = go.Figure(data=[go.Table(
-        header=dict(
-            values=["<b>Ticker</b>", "<b>Secteur</b>", "<b>Prix</b>", "<b>Trigger</b>", "<b>Détail</b>", "<b>Jours</b>"],
-            fill_color=COLORS["card2"],
-            font=dict(color=COLORS["play"], size=13),
-            align="left",
-            height=32,
-        ),
-        cells=dict(
-            values=[tickers, sectors, prices, trigger_types, trigger_details, days],
-            fill_color=COLORS["card"],
-            font=dict(color=COLORS["text"], size=12),
-            align=["left", "left", "right", "center", "left", "center"],
-            height=28,
-        ),
-    )])
-    fig.update_layout(
-        margin=dict(l=0, r=0, t=0, b=0),
-        paper_bgcolor=COLORS["bg"],
-        plot_bgcolor=COLORS["bg"],
-        height=max(120, len(rows) * 30 + 50),
-    )
-    return pio.to_html(fig, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
+        ttype = type_labels.get(td.get("type", ""), td.get("type", "N/A"))
+        detail = (td.get("detail", "") or "N/A")[:60]
+        body_rows.append(
+            f"<tr>"
+            f"<td>{_ticker_link(ticker)}</td>"
+            f"<td>{d.get('sector', '')}</td>"
+            f"<td class='num'>${d.get('price', 0):.2f}</td>"
+            f"<td class='ctr'>{ttype}</td>"
+            f"<td>{detail}</td>"
+            f"<td class='ctr'>{_days_since(d.get('since', ''))}</td>"
+            f"</tr>"
+        )
+    return f'<table class="data-table"><thead>{header}</thead><tbody>{"".join(body_rows)}</tbody></table>'
 
 
 def _empty_table(message: str, color: str) -> str:
@@ -466,6 +413,37 @@ def generate_html(state: dict, top_sectors: list[dict], config: dict) -> None:
       color: var(--subtext);
       font-size: 12px;
     }}
+    .data-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }}
+    .data-table th {{
+      background: var(--card2);
+      padding: 8px 10px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--subtext);
+      white-space: nowrap;
+    }}
+    .data-table td {{
+      background: var(--card);
+      padding: 6px 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }}
+    .data-table tr:last-child td {{ border-bottom: none; }}
+    .data-table td.num {{ text-align: right; font-variant-numeric: tabular-nums; }}
+    .data-table td.ctr {{ text-align: center; }}
+    .ticker-link {{
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }}
+    .ticker-link:hover {{ text-decoration: underline; color: #fff; }}
   </style>
 </head>
 <body>
