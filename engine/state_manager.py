@@ -102,11 +102,10 @@ def update_states(
 ) -> list[dict]:
     """
     Orchestre la mise à jour complète des états :
-    1. Expirations
-    2. Retraits des tickers hors TTM Squeeze
-    3. Nouvelles entrées en ATTENTE
-    4. Promotions ATTENTE → SETUP
-    5. Met à jour top_sectors dans le state
+    1. Expirations (ATTENTE >30j, SETUP >20j, PLAY >5j)
+    2. Nouvelles entrées en ATTENTE (TTM Squeeze + filtres)
+    3. Promotions ATTENTE → SETUP (insider confirmé)
+    4. Met à jour top_sectors dans le state
 
     Retourne la liste des changements pour les alertes Discord.
     """
@@ -143,20 +142,7 @@ def update_states(
             _add_history_event(state, ticker, current, None, f"Expiré après {days}j")
             del state["stocks"][ticker]
 
-    # ── 2. Retrait des titres sortis du TTM Squeeze (état ATTENTE uniquement) ──
-    for ticker in list(state["stocks"].keys()):
-        if state["stocks"][ticker]["state"] == "ATTENTE" and ticker not in filtered_symbols:
-            logger.info(f"{ticker} retiré : hors TTM Squeeze ON")
-            changes.append({
-                "type": "removed",
-                "ticker": ticker,
-                "from": "ATTENTE",
-                "reason": "Plus en TTM Squeeze ON",
-            })
-            _add_history_event(state, ticker, "ATTENTE", None, "Hors TTM Squeeze ON")
-            del state["stocks"][ticker]
-
-    # ── 3. Nouveaux titres → ATTENTE ──
+    # ── 2. Nouveaux titres → ATTENTE ──
     for t in filtered_tickers:
         ticker = t["symbol"]
         if ticker not in state["stocks"]:
@@ -185,7 +171,7 @@ def update_states(
                 "sma50": t.get("sma50", state["stocks"][ticker].get("sma50")),
             })
 
-    # ── 4. Promotions ATTENTE → SETUP ──
+    # ── 3. Promotions ATTENTE → SETUP ──
     for ticker, insider_data in insider_results.items():
         if ticker in state["stocks"] and state["stocks"][ticker]["state"] == "ATTENTE":
             promote_stock(state, ticker, "SETUP", insider_data)
@@ -197,7 +183,7 @@ def update_states(
                 "data": state["stocks"][ticker],
             })
 
-    # ── 5. Mettre à jour top_sectors ──
+    # ── 4. Mettre à jour top_sectors ──
     state["top_sectors"] = top_sectors
 
     save_state(state)

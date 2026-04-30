@@ -43,8 +43,8 @@ triggers:
   news_lookback_hours: 24
 
 states:
-  max_days_attente: 15
-  max_days_setup: 15
+  max_days_attente: 30
+  max_days_setup: 20
   max_days_play: 5
 
 discord:
