@@ -5,8 +5,8 @@
       "since": "2026-04-29",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 65.68,
-      "avg_volume": 1364173,
+      "price": 65.67,
+      "avg_volume": 1394165,
       "sma20": 63.12,
       "sma50": 56.46,
       "name": "PARR",
@@ -109,9 +109,9 @@
       "since": "2026-04-30",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 33.22,
-      "avg_volume": 999604,
-      "sma20": 31.72,
+      "price": 33.14,
+      "avg_volume": 1044345,
+      "sma20": 31.71,
       "sma50": 29.63,
       "name": "CVI",
       "insider_data": null,
@@ -174,9 +174,9 @@
       "since": "2026-04-30",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 6.61,
-      "avg_volume": 1141777,
-      "sma20": 6.43,
+      "price": 6.82,
+      "avg_volume": 1195645,
+      "sma20": 6.44,
       "sma50": 6.26,
       "name": "SXC",
       "insider_data": null,
@@ -257,6 +257,58 @@
       "sma20": 7.36,
       "sma50": 6.98,
       "name": "CRMD",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "CCJ": {
+      "state": "ATTENTE",
+      "since": "2026-05-01",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 123.04,
+      "avg_volume": 2918570,
+      "sma20": 118.15,
+      "sma50": 115.1,
+      "name": "CCJ",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "SOLS": {
+      "state": "ATTENTE",
+      "since": "2026-05-01",
+      "sector": "XLB",
+      "sector_name": "Materials",
+      "price": 81.95,
+      "avg_volume": 1742595,
+      "sma20": 80.41,
+      "sma50": 77.28,
+      "name": "SOLS",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "SBLK": {
+      "state": "ATTENTE",
+      "since": "2026-05-01",
+      "sector": "XLI",
+      "sector_name": "Industrials",
+      "price": 25.13,
+      "avg_volume": 844835,
+      "sma20": 24.49,
+      "sma50": 23.97,
+      "name": "SBLK",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "NVRI": {
+      "state": "ATTENTE",
+      "since": "2026-05-01",
+      "sector": "XLI",
+      "sector_name": "Industrials",
+      "price": 19.69,
+      "avg_volume": 956845,
+      "sma20": 19.47,
+      "sma50": 18.84,
+      "name": "NVRI",
       "insider_data": null,
       "trigger_data": null
     }
@@ -569,36 +621,64 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-05-01T07:19:55.929510Z",
+      "ticker": "CCJ",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-05-01T07:19:55.929598Z",
+      "ticker": "SOLS",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-05-01T07:19:55.929681Z",
+      "ticker": "SBLK",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-05-01T07:19:55.929750Z",
+      "ticker": "NVRI",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-04-30T17:54:20.068777Z",
+  "last_updated": "2026-05-01T07:19:55.929769Z",
   "top_sectors": [
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.206,
-      "perf_3m": 0.1703,
-      "perf_6m": 0.3773,
-      "rel_3m": 0.1318,
-      "rel_6m": 0.3172
+      "score": 0.2073,
+      "perf_3m": 0.1761,
+      "perf_6m": 0.374,
+      "rel_3m": 0.1347,
+      "rel_6m": 0.3163
     },
     {
       "symbol": "XLB",
       "name": "Materials",
-      "score": 0.0646,
-      "perf_3m": 0.049,
-      "perf_6m": 0.2058,
-      "rel_3m": 0.0105,
-      "rel_6m": 0.1457
+      "score": 0.0699,
+      "perf_3m": 0.0493,
+      "perf_6m": 0.2207,
+      "rel_3m": 0.0079,
+      "rel_6m": 0.163
     },
     {
-      "symbol": "XLK",
-      "name": "Technology",
-      "score": 0.0417,
-      "perf_3m": 0.1068,
-      "perf_6m": 0.0619,
-      "rel_3m": 0.0683,
-      "rel_6m": 0.0018
+      "symbol": "XLI",
+      "name": "Industrials",
+      "score": 0.0421,
+      "perf_3m": 0.0582,
+      "perf_6m": 0.1378,
+      "rel_3m": 0.0168,
+      "rel_6m": 0.0801
     }
   ]
 }
