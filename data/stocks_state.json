@@ -1,226 +1,5 @@
 {
   "stocks": {
-    "HWM": {
-      "state": "ATTENTE",
-      "since": "2026-07-15",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 289.18,
-      "avg_volume": 2147952,
-      "sma20": 283.1,
-      "sma50": 274.32,
-      "name": "HWM",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "RXO": {
-      "state": "ATTENTE",
-      "since": "2026-07-15",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 27.77,
-      "avg_volume": 1668314,
-      "sma20": 27.56,
-      "sma50": 26.03,
-      "name": "RXO",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ARQT": {
-      "state": "ATTENTE",
-      "since": "2026-07-15",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 27.99,
-      "avg_volume": 1293693,
-      "sma20": 27.65,
-      "sma50": 25.2,
-      "name": "ARQT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "AYA": {
-      "state": "ATTENTE",
-      "since": "2026-07-15",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 19.65,
-      "avg_volume": 566688,
-      "sma20": 19.6,
-      "sma50": 19.15,
-      "name": "AYA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "PHVS": {
-      "state": "ATTENTE",
-      "since": "2026-07-15",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 34.45,
-      "avg_volume": 571683,
-      "sma20": 34.35,
-      "sma50": 32.2,
-      "name": "PHVS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "OCUL": {
-      "state": "ATTENTE",
-      "since": "2026-07-15",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 9.96,
-      "avg_volume": 3118566,
-      "sma20": 9.85,
-      "sma50": 9.25,
-      "name": "OCUL",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "HROW": {
-      "state": "ATTENTE",
-      "since": "2026-07-16",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 43.71,
-      "avg_volume": 732849,
-      "sma20": 43.29,
-      "sma50": 38.22,
-      "name": "HROW",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "LQDA": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 84.42,
-      "avg_volume": 1635667,
-      "sma20": 79.48,
-      "sma50": 70.45,
-      "name": "LQDA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "LNTH": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 108.03,
-      "avg_volume": 921206,
-      "sma20": 106.36,
-      "sma50": 102.83,
-      "name": "LNTH",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "INDV": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 40.99,
-      "avg_volume": 1510091,
-      "sma20": 40.46,
-      "sma50": 38.92,
-      "name": "INDV",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "TRVI": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 18.46,
-      "avg_volume": 1738418,
-      "sma20": 18.03,
-      "sma50": 17.25,
-      "name": "TRVI",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "BHVN": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 15.51,
-      "avg_volume": 3054491,
-      "sma20": 15.4,
-      "sma50": 12.55,
-      "name": "BHVN",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "RAMP": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 37.85,
-      "avg_volume": 824788,
-      "sma20": 37.8,
-      "sma50": 37.71,
-      "name": "RAMP",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "NUVB": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 6.43,
-      "avg_volume": 9752435,
-      "sma20": 5.86,
-      "sma50": 5.24,
-      "name": "NUVB",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "TYRA": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 32.53,
-      "avg_volume": 549681,
-      "sma20": 31.87,
-      "sma50": 30.59,
-      "name": "TYRA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ANRO": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 26.85,
-      "avg_volume": 801772,
-      "sma20": 26.71,
-      "sma50": 23.45,
-      "name": "ANRO",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CADL": {
-      "state": "ATTENTE",
-      "since": "2026-07-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 10.58,
-      "avg_volume": 1204778,
-      "sma20": 9.91,
-      "sma50": 9.36,
-      "name": "CADL",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "IMVT": {
       "state": "ATTENTE",
       "since": "2026-07-20",
@@ -239,10 +18,10 @@
       "since": "2026-07-20",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 18.15,
-      "avg_volume": 1874271,
-      "sma20": 18.1,
-      "sma50": 17.12,
+      "price": 18.42,
+      "avg_volume": 1891309,
+      "sma20": 18.15,
+      "sma50": 17.21,
       "name": "AMRX",
       "insider_data": null,
       "trigger_data": null
@@ -421,10 +200,10 @@
       "since": "2026-07-21",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 19.86,
-      "avg_volume": 2090278,
-      "sma20": 19.31,
-      "sma50": 18.11,
+      "price": 20.67,
+      "avg_volume": 2083140,
+      "sma20": 19.34,
+      "sma50": 18.13,
       "name": "RLAY",
       "insider_data": null,
       "trigger_data": null
@@ -486,10 +265,10 @@
       "since": "2026-07-21",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 19.59,
-      "avg_volume": 751153,
-      "sma20": 18.87,
-      "sma50": 17.68,
+      "price": 19.95,
+      "avg_volume": 747808,
+      "sma20": 18.89,
+      "sma50": 17.69,
       "name": "AVTX",
       "insider_data": null,
       "trigger_data": null
@@ -577,9 +356,9 @@
       "since": "2026-07-22",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 7.42,
-      "avg_volume": 1006479,
-      "sma20": 7.2,
+      "price": 7.39,
+      "avg_volume": 939658,
+      "sma20": 7.21,
       "sma50": 6.38,
       "name": "STTK",
       "insider_data": null,
@@ -1279,10 +1058,10 @@
       "since": "2026-07-27",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 5.57,
-      "avg_volume": 699603,
+      "price": 5.68,
+      "avg_volume": 650303,
       "sma20": 5.54,
-      "sma50": 4.95,
+      "sma50": 4.96,
       "name": "ZURA",
       "insider_data": null,
       "trigger_data": null
@@ -1318,10 +1097,10 @@
       "since": "2026-07-28",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 209.83,
-      "avg_volume": 1108486,
-      "sma20": 205.47,
-      "sma50": 202.8,
+      "price": 209.15,
+      "avg_volume": 964445,
+      "sma20": 205.51,
+      "sma50": 203.59,
       "name": "BIIB",
       "insider_data": null,
       "trigger_data": null
@@ -1514,9 +1293,9 @@
       "sector": "XLK",
       "sector_name": "Technology",
       "price": 48.27,
-      "avg_volume": 1005798,
-      "sma20": 46.75,
-      "sma50": 46.41,
+      "avg_volume": 1000075,
+      "sma20": 46.82,
+      "sma50": 46.43,
       "name": "SUPN",
       "insider_data": null,
       "trigger_data": null
@@ -1539,10 +1318,10 @@
       "since": "2026-07-28",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 55.38,
-      "avg_volume": 652333,
+      "price": 54.31,
+      "avg_volume": 653867,
       "sma20": 53.43,
-      "sma50": 51.01,
+      "sma50": 51.14,
       "name": "ZD",
       "insider_data": null,
       "trigger_data": null
@@ -1669,10 +1448,10 @@
       "since": "2026-07-29",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 103.63,
-      "avg_volume": 796892,
-      "sma20": 101.46,
-      "sma50": 93.76,
+      "price": 104.6,
+      "avg_volume": 804068,
+      "sma20": 101.82,
+      "sma50": 94.28,
       "name": "SYRE",
       "insider_data": null,
       "trigger_data": null
@@ -1786,10 +1565,10 @@
       "since": "2026-07-30",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 43.9,
-      "avg_volume": 2100396,
-      "sma20": 43.51,
-      "sma50": 39.04,
+      "price": 45.26,
+      "avg_volume": 2164045,
+      "sma20": 43.55,
+      "sma50": 39.83,
       "name": "DFTX",
       "insider_data": null,
       "trigger_data": null
@@ -2306,10 +2085,10 @@
       "since": "2026-08-04",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 29.48,
-      "avg_volume": 1129440,
-      "sma20": 28.47,
-      "sma50": 27.68,
+      "price": 29.56,
+      "avg_volume": 1183352,
+      "sma20": 28.51,
+      "sma50": 27.7,
       "name": "RCUS",
       "insider_data": null,
       "trigger_data": null
@@ -2319,10 +2098,10 @@
       "since": "2026-08-04",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 74.84,
-      "avg_volume": 660344,
-      "sma20": 70.09,
-      "sma50": 66.99,
+      "price": 69.95,
+      "avg_volume": 687279,
+      "sma20": 69.23,
+      "sma50": 67.34,
       "name": "GRAL",
       "insider_data": null,
       "trigger_data": null
@@ -2579,10 +2358,10 @@
       "since": "2026-08-07",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 36.3,
-      "avg_volume": 697275,
-      "sma20": 36.14,
-      "sma50": 34.97,
+      "price": 36.54,
+      "avg_volume": 694634,
+      "sma20": 36.13,
+      "sma50": 34.96,
       "name": "IDYA",
       "insider_data": null,
       "trigger_data": null
@@ -2774,10 +2553,10 @@
       "since": "2026-08-12",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 58.6,
-      "avg_volume": 2866768,
-      "sma20": 58.31,
-      "sma50": 56.82,
+      "price": 59.45,
+      "avg_volume": 2815606,
+      "sma20": 58.21,
+      "sma50": 56.69,
       "name": "RPRX",
       "insider_data": null,
       "trigger_data": null
@@ -2826,10 +2605,10 @@
       "since": "2026-08-12",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 10.47,
-      "avg_volume": 529989,
-      "sma20": 10.42,
-      "sma50": 9.51,
+      "price": 10.53,
+      "avg_volume": 505461,
+      "sma20": 10.38,
+      "sma50": 9.6,
       "name": "NEXN",
       "insider_data": null,
       "trigger_data": null
@@ -2846,149 +2625,48 @@
       "name": "JKHY",
       "insider_data": null,
       "trigger_data": null
+    },
+    "HWM": {
+      "state": "ATTENTE",
+      "since": "2026-08-17",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 289.12,
+      "avg_volume": 2111622,
+      "sma20": 284.3,
+      "sma50": 275.73,
+      "name": "HWM",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "TRVI": {
+      "state": "ATTENTE",
+      "since": "2026-08-17",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 18.48,
+      "avg_volume": 1715316,
+      "sma20": 18.06,
+      "sma50": 17.26,
+      "name": "TRVI",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "NUVB": {
+      "state": "ATTENTE",
+      "since": "2026-08-17",
+      "sector": "XLK",
+      "sector_name": "Technology",
+      "price": 6.48,
+      "avg_volume": 5932190,
+      "sma20": 6.44,
+      "sma50": 5.9,
+      "name": "NUVB",
+      "insider_data": null,
+      "trigger_data": null
     }
   },
   "history": [
-    {
-      "ts": "2026-05-12T08:11:37.061188Z",
-      "ticker": "U",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061247Z",
-      "ticker": "PTGX",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061325Z",
-      "ticker": "SYRE",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061381Z",
-      "ticker": "IMVT",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061448Z",
-      "ticker": "FRSH",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061504Z",
-      "ticker": "ATEN",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061567Z",
-      "ticker": "MGNI",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061625Z",
-      "ticker": "ALKT",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061679Z",
-      "ticker": "OUST",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061744Z",
-      "ticker": "CRVS",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061803Z",
-      "ticker": "BVS",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061857Z",
-      "ticker": "NTGR",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-12T08:11:37.061923Z",
-      "ticker": "OSPN",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.264808Z",
-      "ticker": "MP",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.264883Z",
-      "ticker": "PINS",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.264943Z",
-      "ticker": "CENX",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.264990Z",
-      "ticker": "OTEX",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.265028Z",
-      "ticker": "SEI",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.265083Z",
-      "ticker": "DUOL",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-05-13T08:22:32.265121Z",
-      "ticker": "ACHR",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
     {
       "ts": "2026-05-13T08:22:32.265156Z",
       "ticker": "BULL",
@@ -9848,36 +9526,176 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581395Z",
+      "ticker": "HWM",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581464Z",
+      "ticker": "RXO",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581512Z",
+      "ticker": "ARQT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581633Z",
+      "ticker": "AYA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581666Z",
+      "ticker": "PHVS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581691Z",
+      "ticker": "OCUL",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581714Z",
+      "ticker": "HROW",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581735Z",
+      "ticker": "LQDA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581757Z",
+      "ticker": "LNTH",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581778Z",
+      "ticker": "INDV",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581799Z",
+      "ticker": "TRVI",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581819Z",
+      "ticker": "BHVN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581839Z",
+      "ticker": "RAMP",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581860Z",
+      "ticker": "NUVB",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581880Z",
+      "ticker": "TYRA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581899Z",
+      "ticker": "ANRO",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.581920Z",
+      "ticker": "CADL",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.582161Z",
+      "ticker": "HWM",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.582202Z",
+      "ticker": "TRVI",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-08-17T22:12:22.582225Z",
+      "ticker": "NUVB",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-08-14T22:11:11.103712Z",
+  "last_updated": "2026-08-17T22:12:22.582276Z",
   "top_sectors": [
     {
       "symbol": "XLK",
       "name": "Technology",
-      "score": 0.1048,
-      "perf_3m": 0.0793,
-      "perf_6m": 0.3656,
-      "rel_3m": 0.0263,
-      "rel_6m": 0.2226
-    },
-    {
-      "symbol": "XLF",
-      "name": "Financials",
-      "score": 0.0458,
-      "perf_3m": 0.1421,
-      "perf_6m": 0.1238,
-      "rel_3m": 0.0891,
-      "rel_6m": -0.0192
+      "score": 0.1152,
+      "perf_3m": 0.0928,
+      "perf_6m": 0.3539,
+      "rel_3m": 0.044,
+      "rel_6m": 0.2221
     },
     {
       "symbol": "XLV",
       "name": "Healthcare",
-      "score": 0.0352,
-      "perf_3m": 0.1586,
-      "perf_6m": 0.0726,
-      "rel_3m": 0.1056,
-      "rel_6m": -0.0704
+      "score": 0.0362,
+      "perf_3m": 0.1514,
+      "perf_6m": 0.0685,
+      "rel_3m": 0.1026,
+      "rel_6m": -0.0633
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financials",
+      "score": 0.0298,
+      "perf_3m": 0.1168,
+      "perf_6m": 0.1044,
+      "rel_3m": 0.068,
+      "rel_6m": -0.0274
     }
   ]
 }
