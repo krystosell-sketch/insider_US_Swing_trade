@@ -2137,23 +2137,29 @@
       "since": "2026-08-24",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 145.27,
-      "avg_volume": 605118,
+      "price": 145.25,
+      "avg_volume": 605383,
       "sma20": 145.12,
-      "sma50": 143.69,
+      "sma50": 144.0,
       "name": "ACA",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "LEU": {
+      "state": "ATTENTE",
+      "since": "2026-08-25",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 193.39,
+      "avg_volume": 580528,
+      "sma20": 183.32,
+      "sma50": 174.06,
+      "name": "LEU",
       "insider_data": null,
       "trigger_data": null
     }
   },
   "history": [
-    {
-      "ts": "2026-05-28T23:08:06.212561Z",
-      "ticker": "PAYC",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
     {
       "ts": "2026-05-28T23:08:06.212792Z",
       "ticker": "NEXA",
@@ -9146,36 +9152,43 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-08-25T22:13:21.734956Z",
+      "ticker": "LEU",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-08-24T22:13:06.177469Z",
+  "last_updated": "2026-08-25T22:13:21.734972Z",
   "top_sectors": [
     {
       "symbol": "XLV",
       "name": "Healthcare",
-      "score": 0.1006,
-      "perf_3m": 0.1815,
-      "perf_6m": 0.1163,
-      "rel_3m": 0.1617,
-      "rel_6m": 0.009
+      "score": 0.0985,
+      "perf_3m": 0.1833,
+      "perf_6m": 0.123,
+      "rel_3m": 0.1601,
+      "rel_6m": 0.006
     },
     {
       "symbol": "XLF",
       "name": "Financials",
-      "score": 0.0741,
-      "perf_3m": 0.1268,
-      "perf_6m": 0.1321,
-      "rel_3m": 0.107,
-      "rel_6m": 0.0248
+      "score": 0.0702,
+      "perf_3m": 0.138,
+      "perf_6m": 0.1203,
+      "rel_3m": 0.1148,
+      "rel_6m": 0.0033
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.0709,
-      "perf_3m": 0.0988,
-      "perf_6m": 0.166,
-      "rel_3m": 0.079,
-      "rel_6m": 0.0587
+      "score": 0.0545,
+      "perf_3m": 0.0968,
+      "perf_6m": 0.1429,
+      "rel_3m": 0.0736,
+      "rel_6m": 0.0259
     }
   ]
 }
