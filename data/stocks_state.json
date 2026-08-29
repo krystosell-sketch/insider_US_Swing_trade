@@ -1,109 +1,5 @@
 {
   "stocks": {
-    "GILD": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 138.36,
-      "avg_volume": 6730977,
-      "sma20": 132.82,
-      "sma50": 130.06,
-      "name": "GILD",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "DDOG": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 273.6,
-      "avg_volume": 4185903,
-      "sma20": 259.65,
-      "sma50": 246.1,
-      "name": "DDOG",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "GKOS": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 166.72,
-      "avg_volume": 862759,
-      "sma20": 155.08,
-      "sma50": 138.19,
-      "name": "GKOS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "SYRE": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 106.49,
-      "avg_volume": 849327,
-      "sma20": 103.18,
-      "sma50": 96.96,
-      "name": "SYRE",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "IMNM": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 25.06,
-      "avg_volume": 1123433,
-      "sma20": 22.96,
-      "sma50": 21.32,
-      "name": "IMNM",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "NKTR": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 74.55,
-      "avg_volume": 575420,
-      "sma20": 74.01,
-      "sma50": 70.5,
-      "name": "NKTR",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "PRGS": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 40.59,
-      "avg_volume": 618817,
-      "sma20": 39.1,
-      "sma50": 34.61,
-      "name": "PRGS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "MAX": {
-      "state": "ATTENTE",
-      "since": "2026-07-29",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 13.17,
-      "avg_volume": 734535,
-      "sma20": 13.13,
-      "sma50": 12.33,
-      "name": "MAX",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "NET": {
       "state": "ATTENTE",
       "since": "2026-07-30",
@@ -1513,10 +1409,10 @@
       "since": "2026-08-24",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 145.25,
-      "avg_volume": 605383,
-      "sma20": 145.12,
-      "sma50": 144.0,
+      "price": 145.28,
+      "avg_volume": 567154,
+      "sma20": 145.16,
+      "sma50": 144.84,
       "name": "ACA",
       "insider_data": null,
       "trigger_data": null
@@ -1832,72 +1728,22 @@
       "name": "LTRX",
       "insider_data": null,
       "trigger_data": null
+    },
+    "CNX": {
+      "state": "ATTENTE",
+      "since": "2026-08-29",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 36.2,
+      "avg_volume": 1329919,
+      "sma20": 35.78,
+      "sma50": 34.45,
+      "name": "CNX",
+      "insider_data": null,
+      "trigger_data": null
     }
   },
   "history": [
-    {
-      "ts": "2026-06-04T23:01:38.485880Z",
-      "ticker": "SNAP",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-04T23:01:38.485933Z",
-      "ticker": "TFX",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-04T23:01:38.485976Z",
-      "ticker": "LIVN",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-04T23:01:38.486018Z",
-      "ticker": "WOLF",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-04T23:01:38.486059Z",
-      "ticker": "AXGN",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-04T23:01:38.486095Z",
-      "ticker": "NVCR",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-04T23:01:38.486154Z",
-      "ticker": "EOLS",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-05T22:54:55.717050Z",
-      "ticker": "AEIS",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-06-05T22:54:55.717122Z",
-      "ticker": "CLNN",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
     {
       "ts": "2026-06-05T22:54:55.717175Z",
       "ticker": "NXT",
@@ -8834,36 +8680,99 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.802754Z",
+      "ticker": "GILD",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.802856Z",
+      "ticker": "DDOG",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.802946Z",
+      "ticker": "GKOS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.803027Z",
+      "ticker": "SYRE",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.803108Z",
+      "ticker": "IMNM",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.803234Z",
+      "ticker": "NKTR",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.803314Z",
+      "ticker": "PRGS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.803392Z",
+      "ticker": "MAX",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-08-29T03:24:52.803924Z",
+      "ticker": "CNX",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-08-28T05:52:31.644540Z",
+  "last_updated": "2026-08-29T03:24:52.803945Z",
   "top_sectors": [
-    {
-      "symbol": "XLK",
-      "name": "Technology",
-      "score": 0.0702,
-      "perf_3m": -0.0114,
-      "perf_6m": 0.3549,
-      "rel_3m": -0.0334,
-      "rel_6m": 0.2255
-    },
     {
       "symbol": "XLF",
       "name": "Financials",
-      "score": 0.0659,
-      "perf_3m": 0.1261,
-      "perf_6m": 0.138,
-      "rel_3m": 0.1041,
-      "rel_6m": 0.0086
+      "score": 0.0763,
+      "perf_3m": 0.1336,
+      "perf_6m": 0.1424,
+      "rel_3m": 0.1167,
+      "rel_6m": 0.0156
     },
     {
       "symbol": "XLV",
       "name": "Healthcare",
-      "score": 0.0635,
-      "perf_3m": 0.153,
-      "perf_6m": 0.0916,
-      "rel_3m": 0.131,
-      "rel_6m": -0.0378
+      "score": 0.0724,
+      "perf_3m": 0.1628,
+      "perf_6m": 0.0889,
+      "rel_3m": 0.1459,
+      "rel_6m": -0.0379
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energy",
+      "score": 0.0458,
+      "perf_3m": 0.1018,
+      "perf_6m": 0.114,
+      "rel_3m": 0.0849,
+      "rel_6m": -0.0128
     }
   ]
 }
