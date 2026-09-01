@@ -1149,10 +1149,10 @@
       "since": "2026-08-24",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 145.3,
-      "avg_volume": 571029,
-      "sma20": 145.15,
-      "sma50": 145.03,
+      "price": 145.48,
+      "avg_volume": 563969,
+      "sma20": 145.17,
+      "sma50": 145.05,
       "name": "ACA",
       "insider_data": null,
       "trigger_data": null
@@ -1487,10 +1487,10 @@
       "since": "2026-09-01",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 40.21,
-      "avg_volume": 1329387,
-      "sma20": 39.78,
-      "sma50": 38.96,
+      "price": 40.23,
+      "avg_volume": 1333428,
+      "sma20": 39.82,
+      "sma50": 39.04,
       "name": "HESM",
       "insider_data": null,
       "trigger_data": null
@@ -1500,23 +1500,29 @@
       "since": "2026-09-01",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 53.03,
-      "avg_volume": 840504,
-      "sma20": 52.89,
-      "sma50": 52.61,
+      "price": 53.88,
+      "avg_volume": 832945,
+      "sma20": 52.96,
+      "sma50": 52.59,
       "name": "CRC",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "AA": {
+      "state": "ATTENTE",
+      "since": "2026-09-01",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 50.9,
+      "avg_volume": 4965180,
+      "sma20": 50.49,
+      "sma50": 48.84,
+      "name": "AA",
       "insider_data": null,
       "trigger_data": null
     }
   },
   "history": [
-    {
-      "ts": "2026-06-08T23:06:47.035620Z",
-      "ticker": "ORKA",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
     {
       "ts": "2026-06-08T23:06:47.035665Z",
       "ticker": "RBA",
@@ -8509,36 +8515,43 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-09-01T23:37:06.841225Z",
+      "ticker": "AA",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-09-01T00:50:39.256668Z",
+  "last_updated": "2026-09-01T23:37:06.841250Z",
   "top_sectors": [
     {
       "symbol": "XLV",
       "name": "Healthcare",
-      "score": 0.0791,
-      "perf_3m": 0.17,
-      "perf_6m": 0.0849,
-      "rel_3m": 0.1576,
-      "rel_6m": -0.0386
-    },
-    {
-      "symbol": "XLF",
-      "name": "Financials",
-      "score": 0.0723,
-      "perf_3m": 0.1254,
-      "perf_6m": 0.1347,
-      "rel_3m": 0.113,
-      "rel_6m": 0.0112
+      "score": 0.0842,
+      "perf_3m": 0.1686,
+      "perf_6m": 0.0921,
+      "rel_3m": 0.156,
+      "rel_6m": -0.0236
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.0648,
-      "perf_3m": 0.1115,
-      "perf_6m": 0.1368,
-      "rel_3m": 0.0991,
-      "rel_6m": 0.0133
+      "score": 0.0734,
+      "perf_3m": 0.1112,
+      "perf_6m": 0.1512,
+      "rel_3m": 0.0986,
+      "rel_6m": 0.0355
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financials",
+      "score": 0.0731,
+      "perf_3m": 0.1284,
+      "perf_6m": 0.1247,
+      "rel_3m": 0.1158,
+      "rel_6m": 0.009
     }
   ]
 }
