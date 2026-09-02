@@ -1487,10 +1487,10 @@
       "since": "2026-09-01",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 40.23,
-      "avg_volume": 1333428,
-      "sma20": 39.82,
-      "sma50": 39.04,
+      "price": 40.03,
+      "avg_volume": 1368519,
+      "sma20": 39.85,
+      "sma50": 39.09,
       "name": "HESM",
       "insider_data": null,
       "trigger_data": null
@@ -1500,10 +1500,10 @@
       "since": "2026-09-01",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 53.88,
-      "avg_volume": 832945,
-      "sma20": 52.96,
-      "sma50": 52.59,
+      "price": 53.57,
+      "avg_volume": 833423,
+      "sma20": 53.07,
+      "sma50": 52.6,
       "name": "CRC",
       "insider_data": null,
       "trigger_data": null
@@ -1513,37 +1513,55 @@
       "since": "2026-09-01",
       "sector": "XLE",
       "sector_name": "Energy",
-      "price": 50.9,
-      "avg_volume": 4965180,
-      "sma20": 50.49,
-      "sma50": 48.84,
+      "price": 51.05,
+      "avg_volume": 4907684,
+      "sma20": 50.67,
+      "sma50": 48.76,
       "name": "AA",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "EQT": {
+      "state": "ATTENTE",
+      "since": "2026-09-02",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 55.75,
+      "avg_volume": 6192201,
+      "sma20": 53.96,
+      "sma50": 52.42,
+      "name": "EQT",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "CLF": {
+      "state": "ATTENTE",
+      "since": "2026-09-02",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 12.42,
+      "avg_volume": 14895367,
+      "sma20": 11.82,
+      "sma50": 10.94,
+      "name": "CLF",
+      "insider_data": null,
+      "trigger_data": null
+    },
+    "AYA": {
+      "state": "ATTENTE",
+      "since": "2026-09-02",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 28.35,
+      "avg_volume": 1072348,
+      "sma20": 27.17,
+      "sma50": 22.71,
+      "name": "AYA",
       "insider_data": null,
       "trigger_data": null
     }
   },
   "history": [
-    {
-      "ts": "2026-06-08T23:06:47.035665Z",
-      "ticker": "RBA",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-06-08T23:06:47.035707Z",
-      "ticker": "SRPT",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-06-08T23:06:47.035752Z",
-      "ticker": "ROIV",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
     {
       "ts": "2026-06-08T23:06:47.035799Z",
       "ticker": "CMC",
@@ -8522,36 +8540,57 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-09-02T23:38:39.519669Z",
+      "ticker": "EQT",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-09-02T23:38:39.519763Z",
+      "ticker": "CLF",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-09-02T23:38:39.519847Z",
+      "ticker": "AYA",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-09-01T23:37:06.841250Z",
+  "last_updated": "2026-09-02T23:38:39.519877Z",
   "top_sectors": [
-    {
-      "symbol": "XLV",
-      "name": "Healthcare",
-      "score": 0.0842,
-      "perf_3m": 0.1686,
-      "perf_6m": 0.0921,
-      "rel_3m": 0.156,
-      "rel_6m": -0.0236
-    },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.0734,
-      "perf_3m": 0.1112,
-      "perf_6m": 0.1512,
-      "rel_3m": 0.0986,
-      "rel_6m": 0.0355
+      "score": 0.0765,
+      "perf_3m": 0.1161,
+      "perf_6m": 0.1677,
+      "rel_3m": 0.1028,
+      "rel_6m": 0.037
+    },
+    {
+      "symbol": "XLV",
+      "name": "Healthcare",
+      "score": 0.0702,
+      "perf_3m": 0.1422,
+      "perf_6m": 0.1128,
+      "rel_3m": 0.1289,
+      "rel_6m": -0.0179
     },
     {
       "symbol": "XLF",
       "name": "Financials",
-      "score": 0.0731,
-      "perf_3m": 0.1284,
-      "perf_6m": 0.1247,
-      "rel_3m": 0.1158,
-      "rel_6m": 0.009
+      "score": 0.0592,
+      "perf_3m": 0.1087,
+      "perf_6m": 0.1357,
+      "rel_3m": 0.0954,
+      "rel_6m": 0.005
     }
   ]
 }
