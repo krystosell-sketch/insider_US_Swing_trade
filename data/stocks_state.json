@@ -1,96 +1,5 @@
 {
   "stocks": {
-    "MRK": {
-      "state": "ATTENTE",
-      "since": "2026-08-12",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 132.92,
-      "avg_volume": 8731703,
-      "sma20": 129.15,
-      "sma50": 124.51,
-      "name": "MRK",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "RPRX": {
-      "state": "ATTENTE",
-      "since": "2026-08-12",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 59.69,
-      "avg_volume": 2849808,
-      "sma20": 58.21,
-      "sma50": 56.64,
-      "name": "RPRX",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "DUOL": {
-      "state": "ATTENTE",
-      "since": "2026-08-12",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 146.13,
-      "avg_volume": 1446324,
-      "sma20": 136.88,
-      "sma50": 130.38,
-      "name": "DUOL",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ACVA": {
-      "state": "ATTENTE",
-      "since": "2026-08-12",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 8.27,
-      "avg_volume": 4719016,
-      "sma20": 7.75,
-      "sma50": 7.11,
-      "name": "ACVA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "NRDS": {
-      "state": "ATTENTE",
-      "since": "2026-08-12",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 9.91,
-      "avg_volume": 728150,
-      "sma20": 9.89,
-      "sma50": 9.5,
-      "name": "NRDS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "NEXN": {
-      "state": "ATTENTE",
-      "since": "2026-08-12",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 10.53,
-      "avg_volume": 505461,
-      "sma20": 10.38,
-      "sma50": 9.6,
-      "name": "NEXN",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "JKHY": {
-      "state": "ATTENTE",
-      "since": "2026-08-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 163.06,
-      "avg_volume": 951314,
-      "sma20": 154.72,
-      "sma50": 143.92,
-      "name": "JKHY",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "HWM": {
       "state": "ATTENTE",
       "since": "2026-08-17",
@@ -1809,55 +1718,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-06-15T23:30:26.742805Z",
-      "ticker": "SOBO",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-15T23:30:26.742836Z",
-      "ticker": "SEI",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-15T23:30:26.742859Z",
-      "ticker": "WBI",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-15T23:30:26.742880Z",
-      "ticker": "ETOR",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-15T23:30:26.742899Z",
-      "ticker": "NESR",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-15T23:30:26.742922Z",
-      "ticker": "NUVB",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-16T23:18:07.274337Z",
-      "ticker": "MSFT",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
     {
       "ts": "2026-06-16T23:18:07.274418Z",
       "ticker": "IEP",
@@ -8808,36 +8668,85 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.396985Z",
+      "ticker": "MRK",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 34j"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.397070Z",
+      "ticker": "RPRX",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 34j"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.397144Z",
+      "ticker": "DUOL",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 34j"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.397209Z",
+      "ticker": "ACVA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 34j"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.397273Z",
+      "ticker": "NRDS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 34j"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.397335Z",
+      "ticker": "NEXN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 34j"
+    },
+    {
+      "ts": "2026-09-15T00:02:46.397396Z",
+      "ticker": "JKHY",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
     }
   ],
-  "last_updated": "2026-09-11T23:36:18.486411Z",
+  "last_updated": "2026-09-15T00:02:46.397666Z",
   "top_sectors": [
     {
       "symbol": "XLK",
       "name": "Technology",
-      "score": 0.0747,
-      "perf_3m": 0.0167,
-      "perf_6m": 0.3648,
-      "rel_3m": -0.0163,
-      "rel_6m": 0.2112
-    },
-    {
-      "symbol": "XLE",
-      "name": "Energy",
-      "score": 0.0621,
-      "perf_3m": 0.14,
-      "perf_6m": 0.1483,
-      "rel_3m": 0.107,
-      "rel_6m": -0.0053
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     },
     {
       "symbol": "XLF",
       "name": "Financials",
-      "score": 0.0381,
-      "perf_3m": 0.0771,
-      "perf_6m": 0.1826,
-      "rel_3m": 0.0441,
-      "rel_6m": 0.029
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energy",
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     }
   ]
 }
