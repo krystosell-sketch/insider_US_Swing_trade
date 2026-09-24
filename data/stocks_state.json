@@ -1,18 +1,5 @@
 {
   "stocks": {
-    "ACA": {
-      "state": "ATTENTE",
-      "since": "2026-08-24",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 145.84,
-      "avg_volume": 632428,
-      "sma20": 145.33,
-      "sma50": 145.17,
-      "name": "ACA",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "LEU": {
       "state": "ATTENTE",
       "since": "2026-08-25",
@@ -1188,8 +1175,8 @@
       "since": "2026-09-09",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 69.32,
-      "avg_volume": 579988,
+      "price": 69.34,
+      "avg_volume": 547995,
       "sma20": 64.72,
       "sma50": 58.26,
       "name": "SMCIP",
@@ -2082,13 +2069,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-06-22T23:12:27.184269Z",
-      "ticker": "RLAY",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
     {
       "ts": "2026-06-22T23:12:27.184303Z",
       "ticker": "AOSL",
@@ -9081,36 +9061,43 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-09-24T00:03:02.128645Z",
+      "ticker": "ACA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
     }
   ],
-  "last_updated": "2026-09-22T23:54:24.461483Z",
+  "last_updated": "2026-09-24T00:03:02.128966Z",
   "top_sectors": [
     {
       "symbol": "XLK",
       "name": "Technology",
-      "score": 0.1099,
-      "perf_3m": 0.0735,
-      "perf_6m": 0.4365,
-      "rel_3m": 0.0161,
-      "rel_6m": 0.2505
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     },
     {
-      "symbol": "XLV",
-      "name": "Healthcare",
-      "score": 0.0317,
-      "perf_3m": 0.1121,
-      "perf_6m": 0.1832,
-      "rel_3m": 0.0547,
-      "rel_6m": -0.0028
+      "symbol": "XLF",
+      "name": "Financials",
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.0071,
-      "perf_3m": 0.1601,
-      "perf_6m": 0.0497,
-      "rel_3m": 0.1027,
-      "rel_6m": -0.1363
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     }
   ]
 }
