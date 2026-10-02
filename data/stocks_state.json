@@ -1,44 +1,5 @@
 {
   "stocks": {
-    "HESM": {
-      "state": "ATTENTE",
-      "since": "2026-09-01",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 39.97,
-      "avg_volume": 1365965,
-      "sma20": 39.89,
-      "sma50": 39.5,
-      "name": "HESM",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CRC": {
-      "state": "ATTENTE",
-      "since": "2026-09-01",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 55.57,
-      "avg_volume": 794328,
-      "sma20": 52.95,
-      "sma50": 52.27,
-      "name": "CRC",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "AA": {
-      "state": "ATTENTE",
-      "since": "2026-09-01",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 50.73,
-      "avg_volume": 4257896,
-      "sma20": 50.69,
-      "sma50": 48.58,
-      "name": "AA",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "EQT": {
       "state": "ATTENTE",
       "since": "2026-09-02",
@@ -1744,27 +1705,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-06-24T23:00:18.684741Z",
-      "ticker": "LLY",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-24T23:00:18.684826Z",
-      "ticker": "VRSK",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-24T23:00:18.684902Z",
-      "ticker": "POWI",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
     {
       "ts": "2026-06-24T23:00:18.684955Z",
       "ticker": "IRON",
@@ -8743,9 +8683,30 @@
       "from": "ATTENTE",
       "to": null,
       "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-02T01:07:25.752368Z",
+      "ticker": "HESM",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-02T01:07:25.752434Z",
+      "ticker": "CRC",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-02T01:07:25.752489Z",
+      "ticker": "AA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
     }
   ],
-  "last_updated": "2026-10-01T00:53:08.802790Z",
+  "last_updated": "2026-10-02T01:07:25.752824Z",
   "top_sectors": [
     {
       "symbol": "XLK",
