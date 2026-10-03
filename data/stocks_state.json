@@ -1,44 +1,5 @@
 {
   "stocks": {
-    "EQT": {
-      "state": "ATTENTE",
-      "since": "2026-09-02",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 54.96,
-      "avg_volume": 6204303,
-      "sma20": 54.44,
-      "sma50": 52.73,
-      "name": "EQT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CLF": {
-      "state": "ATTENTE",
-      "since": "2026-09-02",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 12.53,
-      "avg_volume": 12629628,
-      "sma20": 12.03,
-      "sma50": 11.58,
-      "name": "CLF",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "AYA": {
-      "state": "ATTENTE",
-      "since": "2026-09-02",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 30.38,
-      "avg_volume": 1403787,
-      "sma20": 28.31,
-      "sma50": 25.15,
-      "name": "AYA",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "ORCL": {
       "state": "ATTENTE",
       "since": "2026-09-03",
@@ -1705,27 +1666,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-06-24T23:00:18.684955Z",
-      "ticker": "IRON",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-24T23:00:18.685000Z",
-      "ticker": "SPSC",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-06-24T23:00:18.685047Z",
-      "ticker": "LSPD",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
     {
       "ts": "2026-06-24T23:00:18.685089Z",
       "ticker": "SDGR",
@@ -8704,9 +8644,30 @@
       "from": "ATTENTE",
       "to": null,
       "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-03T00:47:15.231980Z",
+      "ticker": "EQT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-03T00:47:15.232045Z",
+      "ticker": "CLF",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-03T00:47:15.232122Z",
+      "ticker": "AYA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
     }
   ],
-  "last_updated": "2026-10-02T01:07:25.752824Z",
+  "last_updated": "2026-10-03T00:47:15.232404Z",
   "top_sectors": [
     {
       "symbol": "XLK",
