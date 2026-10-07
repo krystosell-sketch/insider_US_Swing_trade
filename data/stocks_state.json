@@ -941,10 +941,10 @@
       "since": "2026-09-22",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 122.03,
-      "avg_volume": 1783855,
-      "sma20": 114.68,
-      "sma50": 113.53,
+      "price": 119.57,
+      "avg_volume": 1771065,
+      "sma20": 114.96,
+      "sma50": 114.1,
       "name": "CORT",
       "insider_data": null,
       "trigger_data": null
@@ -1175,10 +1175,10 @@
       "since": "2026-10-06",
       "sector": "XLK",
       "sector_name": "Technology",
-      "price": 58.85,
-      "avg_volume": 2172985,
-      "sma20": 57.76,
-      "sma50": 55.9,
+      "price": 58.33,
+      "avg_volume": 2147625,
+      "sma20": 57.79,
+      "sma50": 55.95,
       "name": "EXEL",
       "insider_data": null,
       "trigger_data": null
@@ -8407,34 +8407,34 @@
       "reason": "TTM Squeeze + filtres"
     }
   ],
-  "last_updated": "2026-10-06T01:58:45.269313Z",
+  "last_updated": "2026-10-07T01:03:55.966805Z",
   "top_sectors": [
     {
       "symbol": "XLK",
       "name": "Technology",
-      "score": 0.1564,
-      "perf_3m": 0.109,
-      "perf_6m": 0.4725,
-      "rel_3m": 0.0669,
-      "rel_6m": 0.2907
+      "score": 0.1455,
+      "perf_3m": 0.0911,
+      "perf_6m": 0.4733,
+      "rel_3m": 0.0521,
+      "rel_6m": 0.2855
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.0217,
-      "perf_3m": 0.148,
-      "perf_6m": 0.0772,
-      "rel_3m": 0.1059,
-      "rel_6m": -0.1046
+      "score": 0.0328,
+      "perf_3m": 0.1698,
+      "perf_6m": 0.0737,
+      "rel_3m": 0.1308,
+      "rel_6m": -0.1141
     },
     {
       "symbol": "XLV",
       "name": "Healthcare",
-      "score": -0.0154,
-      "perf_3m": 0.0352,
-      "perf_6m": 0.1536,
-      "rel_3m": -0.0069,
-      "rel_6m": -0.0282
+      "score": -0.0182,
+      "perf_3m": 0.0343,
+      "perf_6m": 0.1494,
+      "rel_3m": -0.0047,
+      "rel_6m": -0.0384
     }
   ]
 }
