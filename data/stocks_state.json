@@ -1,70 +1,5 @@
 {
   "stocks": {
-    "SMCIP": {
-      "state": "ATTENTE",
-      "since": "2026-09-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 69.34,
-      "avg_volume": 547995,
-      "sma20": 64.72,
-      "sma50": 58.26,
-      "name": "SMCIP",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "SMCI": {
-      "state": "ATTENTE",
-      "since": "2026-09-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 41.54,
-      "avg_volume": 37872179,
-      "sma20": 38.4,
-      "sma50": 34.09,
-      "name": "SMCI",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "KD": {
-      "state": "ATTENTE",
-      "since": "2026-09-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 13.24,
-      "avg_volume": 3513684,
-      "sma20": 12.95,
-      "sma50": 12.89,
-      "name": "KD",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "SLS": {
-      "state": "ATTENTE",
-      "since": "2026-09-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 13.95,
-      "avg_volume": 7273051,
-      "sma20": 13.62,
-      "sma50": 12.8,
-      "name": "SLS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "VREX": {
-      "state": "ATTENTE",
-      "since": "2026-09-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 18.54,
-      "avg_volume": 747112,
-      "sma20": 18.49,
-      "sma50": 15.27,
-      "name": "VREX",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "MU": {
       "state": "ATTENTE",
       "since": "2026-09-10",
@@ -1419,41 +1354,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-07-06T22:56:37.711339Z",
-      "ticker": "TFX",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-06T22:56:37.711372Z",
-      "ticker": "LIVN",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-06T22:56:37.711408Z",
-      "ticker": "WOLF",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-06T22:56:37.711445Z",
-      "ticker": "AXGN",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-06T22:56:37.711486Z",
-      "ticker": "NVCR",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
     {
       "ts": "2026-07-06T22:56:37.711525Z",
       "ticker": "EOLS",
@@ -8418,36 +8318,71 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-10-10T01:21:08.820753Z",
+      "ticker": "SMCIP",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-10T01:21:08.820853Z",
+      "ticker": "SMCI",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-10T01:21:08.820927Z",
+      "ticker": "KD",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-10T01:21:08.820994Z",
+      "ticker": "SLS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-10T01:21:08.821058Z",
+      "ticker": "VREX",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
     }
   ],
-  "last_updated": "2026-10-09T01:32:27.554156Z",
+  "last_updated": "2026-10-10T01:21:08.821364Z",
   "top_sectors": [
     {
       "symbol": "XLK",
       "name": "Technology",
-      "score": 0.1346,
-      "perf_3m": 0.0923,
-      "perf_6m": 0.3954,
-      "rel_3m": 0.0567,
-      "rel_6m": 0.2514
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financials",
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": 0.0762,
-      "perf_3m": 0.1566,
-      "perf_6m": 0.153,
-      "rel_3m": 0.121,
-      "rel_6m": 0.009
-    },
-    {
-      "symbol": "XLV",
-      "name": "Healthcare",
-      "score": 0.0027,
-      "perf_3m": 0.0458,
-      "perf_6m": 0.1354,
-      "rel_3m": 0.0102,
-      "rel_6m": -0.0086
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     }
   ]
 }
