@@ -1,226 +1,5 @@
 {
   "stocks": {
-    "JNJ": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 269.99,
-      "avg_volume": 6505545,
-      "sma20": 269.63,
-      "sma50": 262.47,
-      "name": "JNJ",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "FNV": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 267.2,
-      "avg_volume": 772398,
-      "sma20": 264.43,
-      "sma50": 240.71,
-      "name": "FNV",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "WDAY": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 199.28,
-      "avg_volume": 3527377,
-      "sma20": 194.72,
-      "sma50": 174.98,
-      "name": "WDAY",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "IQV": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 271.04,
-      "avg_volume": 1546654,
-      "sma20": 265.31,
-      "sma50": 259.33,
-      "name": "IQV",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "BIIB": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 229.41,
-      "avg_volume": 1190810,
-      "sma20": 222.96,
-      "sma50": 217.58,
-      "name": "BIIB",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "AUGO": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 92.77,
-      "avg_volume": 1076748,
-      "sma20": 86.71,
-      "sma50": 73.64,
-      "name": "AUGO",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "MARA": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 11.64,
-      "avg_volume": 51144739,
-      "sma20": 11.31,
-      "sma50": 11.19,
-      "name": "MARA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "HTFL": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 50.9,
-      "avg_volume": 1854867,
-      "sma20": 49.75,
-      "sma50": 46.44,
-      "name": "HTFL",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "GRAL": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 80.77,
-      "avg_volume": 850872,
-      "sma20": 78.95,
-      "sma50": 73.96,
-      "name": "GRAL",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "VIA": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 28.37,
-      "avg_volume": 826536,
-      "sma20": 27.32,
-      "sma50": 24.04,
-      "name": "VIA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "SENS": {
-      "state": "ATTENTE",
-      "since": "2026-09-17",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 9.58,
-      "avg_volume": 684446,
-      "sma20": 9.31,
-      "sma50": 7.37,
-      "name": "SENS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "MRNA": {
-      "state": "ATTENTE",
-      "since": "2026-09-18",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 154.04,
-      "avg_volume": 22001260,
-      "sma20": 145.89,
-      "sma50": 98.17,
-      "name": "MRNA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "PBLS": {
-      "state": "ATTENTE",
-      "since": "2026-09-18",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 41.73,
-      "avg_volume": 926209,
-      "sma20": 38.88,
-      "sma50": 35.73,
-      "name": "PBLS",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "VOYG": {
-      "state": "ATTENTE",
-      "since": "2026-09-18",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 37.53,
-      "avg_volume": 1312818,
-      "sma20": 34.55,
-      "sma50": 33.61,
-      "name": "VOYG",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "BTGO": {
-      "state": "ATTENTE",
-      "since": "2026-09-18",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 8.28,
-      "avg_volume": 2361715,
-      "sma20": 7.32,
-      "sma50": 6.12,
-      "name": "BTGO",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ARCT": {
-      "state": "ATTENTE",
-      "since": "2026-09-18",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 16.03,
-      "avg_volume": 1271033,
-      "sma20": 15.41,
-      "sma50": 10.26,
-      "name": "ARCT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "USDE": {
-      "state": "ATTENTE",
-      "since": "2026-09-18",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 10.19,
-      "avg_volume": 11163662,
-      "sma20": 7.42,
-      "sma50": 4.24,
-      "name": "USDE",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "APH": {
       "state": "ATTENTE",
       "since": "2026-09-22",
@@ -1120,125 +899,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-07-13T22:42:57.358718Z",
-      "ticker": "SMTC",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358758Z",
-      "ticker": "JAZZ",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358793Z",
-      "ticker": "OGN",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358828Z",
-      "ticker": "AMBQ",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358872Z",
-      "ticker": "AIP",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358919Z",
-      "ticker": "ACVA",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358960Z",
-      "ticker": "AIRS",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.358999Z",
-      "ticker": "HWM",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359032Z",
-      "ticker": "COHR",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359083Z",
-      "ticker": "KEYS",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359136Z",
-      "ticker": "RVMD",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359192Z",
-      "ticker": "SITM",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359239Z",
-      "ticker": "RYTM",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359285Z",
-      "ticker": "URGN",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359331Z",
-      "ticker": "RXT",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-13T22:42:57.359860Z",
-      "ticker": "HAE",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-15T22:45:56.071595Z",
-      "ticker": "HWM",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
     {
       "ts": "2026-07-15T22:45:56.071702Z",
       "ticker": "RXO",
@@ -8119,36 +7779,155 @@
       "from": "ATTENTE",
       "to": null,
       "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741515Z",
+      "ticker": "JNJ",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741595Z",
+      "ticker": "FNV",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741673Z",
+      "ticker": "WDAY",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741740Z",
+      "ticker": "IQV",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741806Z",
+      "ticker": "BIIB",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741867Z",
+      "ticker": "AUGO",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741929Z",
+      "ticker": "MARA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.741993Z",
+      "ticker": "HTFL",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742051Z",
+      "ticker": "GRAL",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742106Z",
+      "ticker": "VIA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742159Z",
+      "ticker": "SENS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 33j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742214Z",
+      "ticker": "MRNA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742269Z",
+      "ticker": "PBLS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742322Z",
+      "ticker": "VOYG",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742434Z",
+      "ticker": "BTGO",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742493Z",
+      "ticker": "ARCT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-10-20T00:46:08.742549Z",
+      "ticker": "USDE",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
     }
   ],
-  "last_updated": "2026-10-17T00:00:22.647799Z",
+  "last_updated": "2026-10-20T00:46:08.742760Z",
   "top_sectors": [
-    {
-      "symbol": "XLE",
-      "name": "Energy",
-      "score": 0.1611,
-      "perf_3m": 0.1734,
-      "perf_6m": 0.2566,
-      "rel_3m": 0.1509,
-      "rel_6m": 0.1764
-    },
-    {
-      "symbol": "XLV",
-      "name": "Healthcare",
-      "score": 0.0975,
-      "perf_3m": 0.1069,
-      "perf_6m": 0.1974,
-      "rel_3m": 0.0844,
-      "rel_6m": 0.1172
-    },
     {
       "symbol": "XLK",
       "name": "Technology",
-      "score": 0.0407,
-      "perf_3m": 0.0161,
-      "perf_6m": 0.1915,
-      "rel_3m": -0.0064,
-      "rel_6m": 0.1113
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financials",
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energy",
+      "score": NaN,
+      "perf_3m": NaN,
+      "perf_6m": NaN,
+      "rel_3m": NaN,
+      "rel_6m": NaN
     }
   ]
 }
