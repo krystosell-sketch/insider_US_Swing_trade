@@ -1,161 +1,5 @@
 {
   "stocks": {
-    "APH": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 82.84,
-      "avg_volume": 11956147,
-      "sma20": 80.28,
-      "sma50": 80.07,
-      "name": "APH",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "INCY": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 126.93,
-      "avg_volume": 1436617,
-      "sma20": 125.51,
-      "sma50": 122.72,
-      "name": "INCY",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "U": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 45.68,
-      "avg_volume": 10304380,
-      "sma20": 42.5,
-      "sma50": 41.67,
-      "name": "U",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ZBRA": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 361.61,
-      "avg_volume": 561314,
-      "sma20": 352.04,
-      "sma50": 333.19,
-      "name": "ZBRA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CORT": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 121.19,
-      "avg_volume": 1695330,
-      "sma20": 116.23,
-      "sma50": 115.31,
-      "name": "CORT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "TECH": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 72.52,
-      "avg_volume": 3064526,
-      "sma20": 72.49,
-      "sma50": 72.35,
-      "name": "TECH",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "KYMR": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 122.06,
-      "avg_volume": 716507,
-      "sma20": 118.28,
-      "sma50": 114.6,
-      "name": "KYMR",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "FSM": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 12.21,
-      "avg_volume": 4412586,
-      "sma20": 12.11,
-      "sma50": 10.6,
-      "name": "FSM",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "TMDX": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 88.07,
-      "avg_volume": 729609,
-      "sma20": 87.31,
-      "sma50": 83.76,
-      "name": "TMDX",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "RDW": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 11.76,
-      "avg_volume": 12048386,
-      "sma20": 10.91,
-      "sma50": 10.77,
-      "name": "RDW",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "VERA": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 36.26,
-      "avg_volume": 2698879,
-      "sma20": 34.59,
-      "sma50": 34.13,
-      "name": "VERA",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "SIBN": {
-      "state": "ATTENTE",
-      "since": "2026-09-22",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 18.81,
-      "avg_volume": 557360,
-      "sma20": 18.73,
-      "sma50": 18.4,
-      "name": "SIBN",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "XOM": {
       "state": "ATTENTE",
       "since": "2026-10-06",
@@ -899,90 +743,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-07-15T22:45:56.071702Z",
-      "ticker": "RXO",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-15T22:45:56.071760Z",
-      "ticker": "ARQT",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-15T22:45:56.071800Z",
-      "ticker": "AYA",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-15T22:45:56.071842Z",
-      "ticker": "PHVS",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-15T22:45:56.071883Z",
-      "ticker": "OCUL",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449531Z",
-      "ticker": "GLW",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449587Z",
-      "ticker": "TXT",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449650Z",
-      "ticker": "RVTY",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449705Z",
-      "ticker": "LGN",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449749Z",
-      "ticker": "ECG",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449796Z",
-      "ticker": "SOBO",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-16T22:45:40.449838Z",
-      "ticker": "SEI",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
     {
       "ts": "2026-07-16T22:45:40.449883Z",
       "ticker": "WBI",
@@ -7898,9 +7658,93 @@
       "from": "ATTENTE",
       "to": null,
       "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454304Z",
+      "ticker": "APH",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454376Z",
+      "ticker": "INCY",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454440Z",
+      "ticker": "U",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454487Z",
+      "ticker": "ZBRA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454533Z",
+      "ticker": "CORT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454576Z",
+      "ticker": "TECH",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454622Z",
+      "ticker": "KYMR",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454667Z",
+      "ticker": "FSM",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454708Z",
+      "ticker": "TMDX",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454740Z",
+      "ticker": "RDW",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454772Z",
+      "ticker": "VERA",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-10-23T00:14:03.454804Z",
+      "ticker": "SIBN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
     }
   ],
-  "last_updated": "2026-10-22T00:17:23.313134Z",
+  "last_updated": "2026-10-23T00:14:03.454957Z",
   "top_sectors": [
     {
       "symbol": "XLK",
