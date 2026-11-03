@@ -740,16 +740,22 @@
       "name": "MRX",
       "insider_data": null,
       "trigger_data": null
+    },
+    "STLD": {
+      "state": "ATTENTE",
+      "since": "2026-11-03",
+      "sector": "XLE",
+      "sector_name": "Energy",
+      "price": 251.91,
+      "avg_volume": 975390,
+      "sma20": 242.92,
+      "sma50": 238.07,
+      "name": "STLD",
+      "insider_data": null,
+      "trigger_data": null
     }
   },
   "history": [
-    {
-      "ts": "2026-07-16T22:45:40.449883Z",
-      "ticker": "WBI",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
     {
       "ts": "2026-07-16T22:45:40.449928Z",
       "ticker": "ETOR",
@@ -7742,36 +7748,43 @@
       "from": "ATTENTE",
       "to": null,
       "reason": "Expiré après 31j"
-    }
-  ],
-  "last_updated": "2026-10-31T01:07:55.395029Z",
-  "top_sectors": [
-    {
-      "symbol": "XLK",
-      "name": "Technology",
-      "score": NaN,
-      "perf_3m": NaN,
-      "perf_6m": NaN,
-      "rel_3m": NaN,
-      "rel_6m": NaN
     },
     {
-      "symbol": "XLF",
-      "name": "Financials",
-      "score": NaN,
-      "perf_3m": NaN,
-      "perf_6m": NaN,
-      "rel_3m": NaN,
-      "rel_6m": NaN
+      "ts": "2026-11-03T03:06:54.540184Z",
+      "ticker": "STLD",
+      "from": null,
+      "to": "ATTENTE",
+      "reason": "TTM Squeeze + filtres"
+    }
+  ],
+  "last_updated": "2026-11-03T03:06:54.540196Z",
+  "top_sectors": [
+    {
+      "symbol": "XLV",
+      "name": "Healthcare",
+      "score": 0.1829,
+      "perf_3m": 0.1288,
+      "perf_6m": 0.286,
+      "rel_3m": 0.1494,
+      "rel_6m": 0.2332
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "score": NaN,
-      "perf_3m": NaN,
-      "perf_6m": NaN,
-      "rel_3m": NaN,
-      "rel_6m": NaN
+      "score": 0.1584,
+      "perf_3m": 0.1804,
+      "perf_6m": 0.1473,
+      "rel_3m": 0.201,
+      "rel_6m": 0.0945
+    },
+    {
+      "symbol": "XLP",
+      "name": "Consumer Staples",
+      "score": 0.0749,
+      "perf_3m": 0.0715,
+      "perf_6m": 0.102,
+      "rel_3m": 0.0921,
+      "rel_6m": 0.0492
     }
   ]
 }
