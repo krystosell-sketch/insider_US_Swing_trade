@@ -1,161 +1,5 @@
 {
   "stocks": {
-    "AAPL": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 342.0,
-      "avg_volume": 38316425,
-      "sma20": 337.06,
-      "sma50": 325.07,
-      "name": "AAPL",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ABBV": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 272.42,
-      "avg_volume": 4529055,
-      "sma20": 264.34,
-      "sma50": 258.51,
-      "name": "ABBV",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "DOCU": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 70.97,
-      "avg_volume": 3038075,
-      "sma20": 69.19,
-      "sma50": 65.04,
-      "name": "DOCU",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "IT": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 195.41,
-      "avg_volume": 987370,
-      "sma20": 186.74,
-      "sma50": 185.14,
-      "name": "IT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "DSGX": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 81.35,
-      "avg_volume": 668595,
-      "sma20": 79.51,
-      "sma50": 78.37,
-      "name": "DSGX",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "TDC": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 30.29,
-      "avg_volume": 1717960,
-      "sma20": 29.27,
-      "sma50": 28.7,
-      "name": "TDC",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "APPN": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 38.93,
-      "avg_volume": 802720,
-      "sma20": 37.46,
-      "sma50": 36.85,
-      "name": "APPN",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ATEC": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 10.93,
-      "avg_volume": 2109082,
-      "sma20": 10.37,
-      "sma50": 9.9,
-      "name": "ATEC",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "ODD": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 19.55,
-      "avg_volume": 1221565,
-      "sma20": 18.58,
-      "sma50": 15.8,
-      "name": "ODD",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "SXC": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLE",
-      "sector_name": "Energy",
-      "price": 10.06,
-      "avg_volume": 1080020,
-      "sma20": 9.72,
-      "sma50": 9.69,
-      "name": "SXC",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "GDYN": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 8.01,
-      "avg_volume": 875545,
-      "sma20": 7.88,
-      "sma50": 7.78,
-      "name": "GDYN",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "EBS": {
-      "state": "ATTENTE",
-      "since": "2026-10-09",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 7.18,
-      "avg_volume": 1055865,
-      "sma20": 6.83,
-      "sma50": 6.07,
-      "name": "EBS",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "TMO": {
       "state": "ATTENTE",
       "since": "2026-10-13",
@@ -392,90 +236,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-07-20T22:44:49.805815Z",
-      "ticker": "DFTX",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.805848Z",
-      "ticker": "NRIX",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.805881Z",
-      "ticker": "CDNA",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.805915Z",
-      "ticker": "AVR",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.805949Z",
-      "ticker": "OPTX",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.805981Z",
-      "ticker": "BLZE",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.806014Z",
-      "ticker": "ABEO",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 33j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.806043Z",
-      "ticker": "LSCC",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.806074Z",
-      "ticker": "CORZ",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.806103Z",
-      "ticker": "ST",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.806132Z",
-      "ticker": "DIOD",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
-    {
-      "ts": "2026-07-20T22:44:49.806160Z",
-      "ticker": "SYNA",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 32j"
-    },
     {
       "ts": "2026-07-20T22:44:49.806188Z",
       "ticker": "CLSK",
@@ -7391,36 +7151,120 @@
       "from": "ATTENTE",
       "to": null,
       "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.899871Z",
+      "ticker": "AAPL",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.899930Z",
+      "ticker": "ABBV",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.899976Z",
+      "ticker": "DOCU",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900016Z",
+      "ticker": "IT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900054Z",
+      "ticker": "DSGX",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900089Z",
+      "ticker": "TDC",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900175Z",
+      "ticker": "APPN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900243Z",
+      "ticker": "ATEC",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900304Z",
+      "ticker": "ODD",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900365Z",
+      "ticker": "SXC",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900423Z",
+      "ticker": "GDYN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
+    },
+    {
+      "ts": "2026-11-10T03:51:58.900486Z",
+      "ticker": "EBS",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 32j"
     }
   ],
-  "last_updated": "2026-11-07T01:20:27.095824Z",
+  "last_updated": "2026-11-10T03:51:58.900560Z",
   "top_sectors": [
     {
-      "symbol": "XLK",
-      "name": "Technology",
-      "score": NaN,
-      "perf_3m": NaN,
-      "perf_6m": NaN,
-      "rel_3m": NaN,
-      "rel_6m": NaN
+      "symbol": "XLV",
+      "name": "Healthcare",
+      "score": 0.209,
+      "perf_3m": 0.1224,
+      "perf_6m": 0.3275,
+      "rel_3m": 0.1456,
+      "rel_6m": 0.3042
+    },
+    {
+      "symbol": "XLP",
+      "name": "Consumer Staples",
+      "score": 0.0918,
+      "perf_3m": 0.0753,
+      "perf_6m": 0.105,
+      "rel_3m": 0.0985,
+      "rel_6m": 0.0817
     },
     {
       "symbol": "XLF",
       "name": "Financials",
-      "score": NaN,
-      "perf_3m": NaN,
-      "perf_6m": NaN,
-      "rel_3m": NaN,
-      "rel_6m": NaN
-    },
-    {
-      "symbol": "XLE",
-      "name": "Energy",
-      "score": NaN,
-      "perf_3m": NaN,
-      "perf_6m": NaN,
-      "rel_3m": NaN,
-      "rel_6m": NaN
+      "score": 0.0639,
+      "perf_3m": 0.0048,
+      "perf_6m": 0.1411,
+      "rel_3m": 0.028,
+      "rel_6m": 0.1178
     }
   ]
 }
