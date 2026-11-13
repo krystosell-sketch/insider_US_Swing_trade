@@ -1,96 +1,5 @@
 {
   "stocks": {
-    "TMO": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 717.71,
-      "avg_volume": 2372870,
-      "sma20": 695.11,
-      "sma50": 667.09,
-      "name": "TMO",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "WAT": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 444.15,
-      "avg_volume": 875066,
-      "sma20": 432.48,
-      "sma50": 419.78,
-      "name": "WAT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "QGEN": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 46.17,
-      "avg_volume": 2228237,
-      "sma20": 44.64,
-      "sma50": 43.72,
-      "name": "QGEN",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CVLT": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 166.74,
-      "avg_volume": 752145,
-      "sma20": 162.97,
-      "sma50": 152.57,
-      "name": "CVLT",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "WAY": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 28.84,
-      "avg_volume": 2058070,
-      "sma20": 28.55,
-      "sma50": 26.72,
-      "name": "WAY",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "CRSR": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 13.55,
-      "avg_volume": 1025375,
-      "sma20": 13.52,
-      "sma50": 12.71,
-      "name": "CRSR",
-      "insider_data": null,
-      "trigger_data": null
-    },
-    "RPD": {
-      "state": "ATTENTE",
-      "since": "2026-10-13",
-      "sector": "XLK",
-      "sector_name": "Technology",
-      "price": 13.08,
-      "avg_volume": 1686583,
-      "sma20": 12.5,
-      "sma50": 12.21,
-      "name": "RPD",
-      "insider_data": null,
-      "trigger_data": null
-    },
     "GOOGL": {
       "state": "ATTENTE",
       "since": "2026-10-15",
@@ -665,55 +574,6 @@
     }
   },
   "history": [
-    {
-      "ts": "2026-07-22T22:49:46.335045Z",
-      "ticker": "ADPT",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-22T22:49:46.335121Z",
-      "ticker": "GLUE",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-22T22:49:46.335194Z",
-      "ticker": "STTK",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-22T22:49:46.335262Z",
-      "ticker": "ANGO",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-22T22:49:46.335330Z",
-      "ticker": "AARD",
-      "from": null,
-      "to": "ATTENTE",
-      "reason": "TTM Squeeze + filtres"
-    },
-    {
-      "ts": "2026-07-23T22:45:04.342987Z",
-      "ticker": "FLEX",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
-    {
-      "ts": "2026-07-23T22:45:04.343081Z",
-      "ticker": "ON",
-      "from": "ATTENTE",
-      "to": null,
-      "reason": "Expiré après 31j"
-    },
     {
       "ts": "2026-07-23T22:45:04.343189Z",
       "ticker": "GH",
@@ -7664,9 +7524,58 @@
       "from": null,
       "to": "ATTENTE",
       "reason": "TTM Squeeze + filtres"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.572906Z",
+      "ticker": "TMO",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.572988Z",
+      "ticker": "WAT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.573064Z",
+      "ticker": "QGEN",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.573125Z",
+      "ticker": "CVLT",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.573183Z",
+      "ticker": "WAY",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.573239Z",
+      "ticker": "CRSR",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
+    },
+    {
+      "ts": "2026-11-13T02:12:23.573291Z",
+      "ticker": "RPD",
+      "from": "ATTENTE",
+      "to": null,
+      "reason": "Expiré après 31j"
     }
   ],
-  "last_updated": "2026-11-12T02:35:42.482460Z",
+  "last_updated": "2026-11-13T02:12:23.573490Z",
   "top_sectors": [
     {
       "symbol": "XLK",
