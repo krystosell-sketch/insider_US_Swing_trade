@@ -7445,34 +7445,34 @@
       "reason": "Expiré après 33j"
     }
   ],
-  "last_updated": "2026-11-21T02:53:11.536735Z",
+  "last_updated": "2026-11-24T05:37:46.328243Z",
   "top_sectors": [
     {
       "symbol": "XLV",
       "name": "Healthcare",
-      "score": 0.1763,
-      "perf_3m": 0.015,
-      "perf_6m": 0.2062,
-      "rel_3m": 0.1121,
-      "rel_6m": 0.2727
+      "score": 0.1559,
+      "perf_3m": 0.0378,
+      "perf_6m": 0.2181,
+      "rel_3m": 0.0926,
+      "rel_6m": 0.2509
     },
     {
       "symbol": "XLP",
       "name": "Consumer Staples",
-      "score": 0.1495,
-      "perf_3m": 0.0524,
-      "perf_6m": 0.083,
-      "rel_3m": 0.1495,
-      "rel_6m": 0.1495
+      "score": 0.1169,
+      "perf_3m": 0.0545,
+      "perf_6m": 0.0954,
+      "rel_3m": 0.1093,
+      "rel_6m": 0.1282
     },
     {
-      "symbol": "XLE",
-      "name": "Energy",
-      "score": 0.0881,
-      "perf_3m": -0.0192,
-      "perf_6m": 0.0368,
-      "rel_3m": 0.0779,
-      "rel_6m": 0.1033
+      "symbol": "XLF",
+      "name": "Financials",
+      "score": 0.0535,
+      "perf_3m": -0.0414,
+      "perf_6m": 0.0809,
+      "rel_3m": 0.0134,
+      "rel_6m": 0.1137
     }
   ]
 }
